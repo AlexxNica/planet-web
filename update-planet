@@ -1,0 +1,18 @@
+#!/bin/sh
+if [ "$(basename `pwd`)" != "planet-web" ]; then
+	echo "YOU MUST RUN THIS IN planet-web!"
+	exit 1
+elif [ -f lock ]; then
+	# quietly exit
+	exit
+else
+	touch lock
+fi
+
+find config -name config.ini | while read CONFIG; do
+	pushd $(dirname $CONFIG) > /dev/null
+	/usr/local/bin/planet/planet.py config.ini
+	popd > /dev/null
+done
+
+rm -f lock
