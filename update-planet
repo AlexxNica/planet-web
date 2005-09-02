@@ -2,17 +2,19 @@
 if [ "$(basename `pwd`)" != "planet-web" ]; then
 	echo "YOU MUST RUN THIS IN planet-web!"
 	exit 1
-elif [ -f lock ]; then
+elif [ ! -f config/$1/config.ini ]; then
+	echo "You must specify an existing planet to update."
+	exit 1
+elif [ -f lock.$1 ]; then
 	# quietly exit
 	exit
 else
-	touch lock
+	touch lock.$1
 fi
 
-find config -name config.ini | while read CONFIG; do
-	pushd $(dirname $CONFIG) > /dev/null
-	/usr/local/bin/planet/planet.py config.ini
-	popd > /dev/null
-done
+pushd config/$1 > /dev/null
+#/usr/local/bin/planet/planet.py config.ini
+echo $1 ... $(pwd)
+popd > /dev/null
 
-rm -f lock
+rm -f lock.$1
