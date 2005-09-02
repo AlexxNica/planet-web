@@ -1,0 +1,146 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title><TMPL_VAR name></title>
+	<link rel="stylesheet" href="generic.css" type="text/css">
+	<link rel="stylesheet" href="layout.css" type="text/css">
+	<link rel="stylesheet" href="planet.css" type="text/css">
+
+	<link rel="icon" type="image/png" href="http://planet.gnome.org/img/gnome-16.png">
+	<link rel="SHORTCUT ICON" type="image/png" href="http://planet.gnome.org/img/gnome-16.png">
+	<link rel="alternate" type="application/rss+xml" title="Planet GNOME" href="http://planet.gnome.org/rss20.xml">
+</head>
+
+
+<body>
+
+
+<div id="hdr">
+	<div id="banner"><img src="http://planet.gnome.org/img/spacer" alt=""></div>
+	<div id="logo"><a
+		href="./"><img
+		src="http://planet.gnome.org/img/spacer" alt="Home"></a></div>
+
+    <div id="hdrNav">
+		<b><i>New!</i></b> <a href="http://planet.gnome.org/news/">Planet GNOME News</a>!
+    </div>
+</div>
+
+
+<div id="body">
+
+
+<div style="border: 1px solid #aaffaa; background-color: #ddffdd; padding: 1em;">
+<b>GNOME News Needs You!</b> If you have an RSS feed of announcements and news about your GNOME-related project, let <a href="mailto:jdub@gnome.org">Jeff</a> know, so he can put it on the newly revitalised <a href="http://planet.gnome.org/news/">GNOME News</a> page. It helps if you have a cool icon for your project, too.
+</div>
+
+
+<TMPL_LOOP Items>
+	<TMPL_IF new_date>
+		<h2 class="date"><TMPL_VAR new_date></h2>
+	</TMPL_IF>
+
+	<div class="entry<TMPL_IF channel_nick> <TMPL_VAR channel_nick></TMPL_IF>">
+	
+	<div class="person-info">
+		<a href="<TMPL_VAR channel_link ESCAPE="HTML">" title="<TMPL_VAR channel_title ESCAPE="HTML">">
+			<TMPL_IF channel_face>
+				<img class="face" src="http://planet.gnome.org/heads/<TMPL_VAR channel_face ESCAPE="HTML">" alt=""><br />
+			<TMPL_ELSE>
+				<img class="face" src="http://planet.gnome.org/heads/nobody.png" alt=""><br />
+			</TMPL_IF>
+			<TMPL_VAR channel_name>
+			<TMPL_IF channel_nick>
+			<br />
+			(<TMPL_VAR channel_nick>)
+			</TMPL_IF>
+		</a>
+	</div>
+	
+		<div class="post">
+		<div class="post2">
+			<div class="post-header">
+				<TMPL_IF title>
+				<h4 class="post-title"><a href="<TMPL_VAR link ESCAPE="HTML">"><TMPL_VAR title></a></h4>
+				<TMPL_ELSE>
+				<div class="post-title"><span>&nbsp;</span></div>
+				</TMPL_IF>
+			</div>
+			<div class="post-contents">
+			<TMPL_VAR content>
+			</div>
+			<div class="post-footer">
+				<p><a href="<TMPL_VAR link ESCAPE="HTML">"><TMPL_VAR date></a>
+			</div>
+		</div>
+		</div>
+
+	</div>
+</TMPL_LOOP>
+</div>
+
+
+<div id="sidebar">
+	<div class="section">
+	<h3>Planet GNOME</h3>
+	<p>Planet GNOME is a window into the world, work and lives of GNOME <a href="http://planet.gnome.org/heads/">hackers and contributors</a>.</p>
+	<p>Updated on <TMPL_VAR date> UTC. Entries are normalised to UTC time.</p>
+	</div>
+
+	<div class="section">
+	<h3>GNOME World Wide</h3>
+	<p class="center"><a href="http://live.gnome.org/GnomeWorldWide"><img src="http://www.gnome.org/~jdub/random/GnomeWorldWideSmall.jpg" alt=""></a></p>
+	<p>GNOME communities around the world by region and language:</p>
+	<ul>
+		<li><a href="http://www.gnomebangalore.org/?q=blog">Bangalore, India</a></li>
+		<li><a href="http://gnome.cult.bg/">Bulgaria</a></li>
+		<li><a href="http://planeta.gnome.cl/">Chile</a></li>
+		<li><a href="http://planet.gnomefr.org/">French</a></li>
+		<li><a href="http://planet.gnome-ev.de/">Germany</a></li>
+		<li><a href="http://planeta.es.gnome.org/">Hispano</a></li>
+		<li><a href="http://gnome.or.kr/pgk/">Korea</a></li>
+		<li><a href="http://planet.nl.gnome.org/">Netherlands</a></li>
+		<li><a href="http://www.uk.gnome.org/planet/">United Kingdom</a></li>
+	</ul>
+	</div>
+
+	<div class="section">
+	<h3>Feeds</h3>
+	<ul>
+	<TMPL_LOOP Channels>
+		<li><a href="<TMPL_VAR link ESCAPE="HTML">"><TMPL_VAR name ESCAPE="HTML"></a></li>
+	</TMPL_LOOP>
+	</ul>
+	</div>
+
+	<div class="section">
+	<h3>Subscribe</h3>
+	<ul>
+		<li><a href="rss20.xml">RSS 2.0</a></li>
+		<li><a href="rss10.xml">RSS 1.0</a></li>
+		<li><a href="foafroll.xml">FOAF</a></li>
+		<li><a href="opml.xml">OPML</a></li>
+	</ul>
+	</div>
+
+	<div class="section">
+	<h3>Colophon</h3>
+	<p>Brought to you by the <a href="http://www.planetplanet.org/">Planet</a> aggregator, cron, <a href="http://www.python.org/">Python</a>, <a href="http://www.redhat.com/">Red Hat</a> (who kindly host the GNOME servers). Beautiful template design by <a href="http://www.actsofvolition.com/">Steven Garrity</a>, concept by <a href="http://www.gnome.org/~seth/">Seth Nickell</a> and <a href="http://www.isity.net/">Diana Fong</a>.</p>
+	<p>Planet GNOME is edited by <a href="mailto:jdub@gnome.org">Jeff Waugh</a>. Please mail him if you have a question or would like your blog added to the feed.</p>
+	</div>
+</div>
+
+
+<div id="copyright">
+Copyright &copy; 2003-2005, <a href="http://www.gnome.org/">The GNOME Project</a><br />
+Blog entries aggregated on this page are owned by, and represent the opinion of the author.<br />
+<a href="http://validator.w3.org/check/referer">Optimised</a> for <a href="http://www.w3.org/">standards</a>. Hosted by <a href="http://redhat.com/">Red Hat</a>.<br />
+</div>
+
+
+</body>
+
+</html>
