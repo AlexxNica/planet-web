@@ -16,10 +16,12 @@ for i in web/heads/*.png; do
 	THUMB=$(basename $i)
 	if [ -f "web/heads/big/$THUMB" ]; then
 		echo "<a href=\"http://planet.gnome.org/heads/big/$THUMB\">"
-		echo "  <img src=\"http://planet.gnome.org/heads/$THUMB\" border=\"0\">"
+		echo "  <img src=\"http://planet.gnome.org/heads/$THUMB\"
+			border=\"0\" alt=\"$(basename $THUMB .png)\">"
 		echo "</a>"
 	else
-		echo "<img src=\"http://planet.gnome.org/heads/$THUMB\" border=\"0\">"
+		echo "<img src=\"http://planet.gnome.org/heads/$THUMB\"
+			border=\"0\" alt=\"$(basename $THUMB .png)\">"
 	fi
 done
 
@@ -34,7 +36,7 @@ echo "</p>
 for i in web/heads/logos/*.{png,jpg}; do
 	THUMB=$(basename $i)
 	echo "<img src=\"http://planet.gnome.org/heads/logos/$THUMB\"
-		border=\"0\">"
+		border=\"0\" alt=\"$(basename $THUMB)\">"
 done
 
 echo "</p>
