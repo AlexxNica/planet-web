@@ -13,7 +13,7 @@ else
 fi
 
 pushd config/$1 > /dev/null
-/usr/local/bin/planet/planet.py config.ini
+/usr/local/bin/planet/planet.py -o config.ini
 popd > /dev/null
 
 rm -f lock.$1
