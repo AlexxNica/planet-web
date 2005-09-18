@@ -5,9 +5,9 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title><TMPL_VAR name></title>
-	<link rel="stylesheet" href="generic.css" type="text/css">
-	<link rel="stylesheet" href="layout.css" type="text/css">
-	<link rel="stylesheet" href="planet.css" type="text/css">
+	<link rel="stylesheet" href="http://planet.gnome.org/generic.css" type="text/css">
+	<link rel="stylesheet" href="http://planet.gnome.org/layout.css" type="text/css">
+	<link rel="stylesheet" href="http://planet.gnome.org/planet.css" type="text/css">
 
 	<link rel="icon" type="image/png" href="http://planet.gnome.org/img/gnome-16.png">
 	<link rel="SHORTCUT ICON" type="image/png" href="http://planet.gnome.org/img/gnome-16.png">
@@ -43,6 +43,7 @@
 	<div class="person-info">
 		<a href="<TMPL_VAR channel_link ESCAPE="HTML">" title="<TMPL_VAR channel_title ESCAPE="HTML">">
 			<TMPL_IF channel_face>
+				<img class="face" src="http://planet.gnome.org/heads/logos/<TMPL_IF __ODD__>pirate1.png<TMPL_ELSE>pirate2.png</TMPL_IF>" alt="" style="position: relative; z-index: 51; margin-bottom: -25px;"><br />
 				<img class="face" src="http://planet.gnome.org/heads/<TMPL_VAR channel_face ESCAPE="HTML">" alt=""><br />
 			<TMPL_ELSE>
 				<img class="face" src="http://planet.gnome.org/heads/nobody.png" alt=""><br />
