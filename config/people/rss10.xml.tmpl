@@ -25,7 +25,7 @@
 	<title><TMPL_VAR channel_name><TMPL_IF channel_nick> (<TMPL_VAR channel_nick>)</TMPL_IF><TMPL_IF title>: <TMPL_VAR title></TMPL_IF></title>
 	<link><TMPL_VAR link></link>
 	<TMPL_IF content>
-	<content:encoded><TMPL_IF channel_face>&lt;img src="http://planet.gnome.org/heads/<TMPL_VAR channel_face ESCAPE="HTML">" align="right" alt=""&gt;</TMPL_IF><TMPL_VAR content ESCAPE="HTML"></content:encoded>
+	<content:encoded><TMPL_IF channel_face>&lt;img src="<TMPL_VAR channel_face ESCAPE="HTML">" align="right" alt=""&gt;</TMPL_IF><TMPL_VAR content ESCAPE="HTML"></content:encoded>
 	</TMPL_IF>
 	<dc:date><TMPL_VAR date_iso></dc:date>
 	<TMPL_IF creator>

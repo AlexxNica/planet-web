@@ -15,6 +15,12 @@
 	<foaf:member>
 		<foaf:Agent>
 			<foaf:name><TMPL_VAR name></foaf:name>
+			<TMPL_IF nick>
+			<foaf:nick><TMPL_VAR nick></foaf:nick>
+			</TMPL_IF>
+			<TMPL_IF face>
+			<foaf:img rdf:resource="<TMPL_VAR face>" />
+			</TMPL_IF>
 			<foaf:weblog>
 				<foaf:Document rdf:about="<TMPL_VAR link ESCAPE="HTML">">
 					<dc:title><TMPL_VAR title></dc:title>
