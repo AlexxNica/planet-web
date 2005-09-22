@@ -44,10 +44,6 @@ div.post-contents blockquote {
 	line-height: 150%;
 }
 
-div.post-contents img {
-	max-width: 100%;
-}
-
 div.post-contents:after {
 	content: "";
 	display: block;
