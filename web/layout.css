@@ -20,7 +20,7 @@ body {
 	position: absolute;
 	top: 10px;
 	left: 10px;
-	background: url('img/planetgnome-64') no-repeat;
+	background: url('http://www.gnome.org/img/logo/text-64') no-repeat;
 	width: 64px;
 	height: 64px;
 }
