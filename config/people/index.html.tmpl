@@ -47,11 +47,7 @@
 			<TMPL_ELSE>
 				<img class="face" src="http://planet.gnome.org/heads/nobody.png" alt=""><br />
 			</TMPL_IF>
-			<TMPL_VAR channel_name>
-			<TMPL_IF channel_nick>
-			<br />
-			(<TMPL_VAR channel_nick>)
-			</TMPL_IF>
+			<TMPL_VAR channel_name><TMPL_IF channel_nick><br />(<TMPL_VAR channel_nick>)</TMPL_IF>
 		</a>
 	</div>
 	
