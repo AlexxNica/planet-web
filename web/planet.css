@@ -113,3 +113,8 @@ h2.date {
 	font-size: 130%;
 	padding-left: 10px;
 }
+
+#sidebar .message {
+	cursor: help;
+	color: #666;
+}
