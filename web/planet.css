@@ -114,6 +114,18 @@ h2.date {
 	padding-left: 10px;
 }
 
+#sidebar ul li {
+	font-size: small;
+}
+
+#sidebar ul li a {
+	text-decoration: none;
+}
+
+#sidebar ul li a:hover {
+	text-decoration: underline;
+}
+
 #sidebar .message {
 	cursor: help;
 	color: #666;
