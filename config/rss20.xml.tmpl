@@ -13,7 +13,12 @@
 	<guid><TMPL_VAR id ESCAPE="HTML"></guid>
 	<link><TMPL_VAR link ESCAPE="HTML"></link>
 	<TMPL_IF content>
-	<description><TMPL_VAR content ESCAPE="HTML"></description>
+	<description>
+<TMPL_IF face>
+	&lt;img src=&quot;<TMPL_VAR face ESCAPE="HTML">&quot; alt=&quot;&quot; align=&quot;right&quot; style=&quot;float: right;&quot;<TMPL_IF width> width=&quot;<TMPL_VAR width>&quot;</TMPL_IF><TMPL_IF height> height=&quot;<TMPL_VAR height>&quot;</TMPL_IF>&gt;
+</TMPL_IF>
+	<TMPL_VAR content ESCAPE="HTML">
+	</description>
 	</TMPL_IF>
 	<pubDate><TMPL_VAR date_822></pubDate>
 	<TMPL_IF author_email>
