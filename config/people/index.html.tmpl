@@ -115,15 +115,6 @@
 	</div>
 
 	<div class="section">
-	<h3>Feeds</h3>
-	<ul>
-	<TMPL_LOOP Channels>
-	<li><a href="<TMPL_VAR url ESCAPE="HTML">" title="subscribe"><img src="http://planet.gnome.org/img/feed-icon-10x10.png" alt="(feed)"></a> <a <TMPL_IF link>href="<TMPL_VAR link ESCAPE="HTML">" </TMPL_IF><TMPL_IF message>class="message" title="<TMPL_VAR message ESCAPE="HTML">"</TMPL_IF><TMPL_UNLESS message>title="<TMPL_VAR title_plain ESCAPE="HTML">"</TMPL_UNLESS>><TMPL_VAR name></a></li>
-	</TMPL_LOOP>
-	</ul>
-	</div>
-
-	<div class="section">
 	<h3>Subscribe</h3>
 	<ul>
 		<li><a href="atom.xml">Atom 1.0</a></li>
@@ -131,6 +122,15 @@
 		<li><a href="rss10.xml">RSS 1.0</a></li>
 		<li><a href="foafroll.xml">FOAF</a></li>
 		<li><a href="opml.xml">OPML</a></li>
+	</ul>
+	</div>
+
+	<div class="section">
+	<h3>Feeds</h3>
+	<ul>
+	<TMPL_LOOP Channels>
+	<li><a href="<TMPL_VAR url ESCAPE="HTML">" title="subscribe"><img src="http://planet.gnome.org/img/feed-icon-10x10.png" alt="(feed)"></a> <a <TMPL_IF link>href="<TMPL_VAR link ESCAPE="HTML">" </TMPL_IF><TMPL_IF message>class="message" title="<TMPL_VAR message ESCAPE="HTML">"</TMPL_IF><TMPL_UNLESS message>title="<TMPL_VAR title_plain ESCAPE="HTML">"</TMPL_UNLESS>><TMPL_VAR name></a></li>
+	</TMPL_LOOP>
 	</ul>
 	</div>
 

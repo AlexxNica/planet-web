@@ -86,15 +86,6 @@
 	</div>
 
     <div class="section">
-    <h3>Feeds</h3>
-    <ul>
-    <TMPL_LOOP Channels>
-		<li><a href="<TMPL_VAR link ESCAPE="HTML">"><TMPL_VAR name ESCAPE="HTML"></a></li>
-    </TMPL_LOOP>
-    </ul>
-    </div>
-
-    <div class="section">
     <h3>Subscribe</h3>
     <ul>
         <li><a href="atom.xml">Atom 1.0</a></li>
@@ -102,6 +93,15 @@
         <li><a href="rss10.xml">RSS 1.0</a></li>
         <li><a href="foafroll.xml">FOAF</a></li>
         <li><a href="opml.xml">OPML</a></li>
+    </ul>
+    </div>
+
+    <div class="section">
+    <h3>Feeds</h3>
+    <ul>
+    <TMPL_LOOP Channels>
+		<li><a href="<TMPL_VAR link ESCAPE="HTML">"><TMPL_VAR name ESCAPE="HTML"></a></li>
+    </TMPL_LOOP>
     </ul>
     </div>
 
