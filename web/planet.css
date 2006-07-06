@@ -10,7 +10,7 @@ div.entry ul {
 	padding: 0px;
 }
 
-div.entry li {
+div.entry ul li {
 	margin: 1em;
 	padding: 0px;
 	list-style-image: url("http://planet.gnome.org/img/gnome-16.png");
