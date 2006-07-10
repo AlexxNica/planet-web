@@ -1,14 +1,8 @@
 Please don't commit to this module without permission from the Planet GNOME
-editor [1], Jeff Waugh <jdub@gnome.org>, unless you are:
-
- * Updating your own RSS feed location
-
-And, ah, that's it for now. :-)
-
+editor [1], Jeff Waugh <jdub@gnome.org>.
 
 Please don't run update-* manually, they are executed by the update script
 and cron, to automagically do the right thing.
-
 
 [1] Strong editorial policies have kept Planet GNOME relevant and readable,
 so even though it seems pretty fascist, it ends up being pretty good. Let
