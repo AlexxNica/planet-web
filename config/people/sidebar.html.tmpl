@@ -3,12 +3,13 @@
 ### we can only show items that have titles in this feed
 <TMPL_IF title>
 <li>
+<a href="<TMPL_VAR link ESCAPE="HTML">">
 <TMPL_IF channel_face>
 <img src="<TMPL_VAR channel_face ESCAPE="HTML">" height="24" alt="">
 <TMPL_ELSE>
 <img src="http://planet.gnome.org/heads/nobody.png" height="24" alt="">
 </TMPL_IF>
-<a href="<TMPL_VAR link ESCAPE="HTML">"><TMPL_VAR title_plain></a>
+<TMPL_VAR title_plain></a>
 </li>
 </TMPL_IF>
 
