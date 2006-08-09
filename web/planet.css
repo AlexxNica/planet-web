@@ -51,6 +51,12 @@ div.post-contents p {
 	margin-top: 1em!important;
 }
 
+div.post-contents img {
+	width: auto;
+	max-width: 100%;
+	height: auto;
+}
+
 div.post-contents blockquote {
 	color: #666;
 	line-height: 150%;
