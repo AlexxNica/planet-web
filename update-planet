@@ -12,11 +12,13 @@ elif [ -f lock.$1 ]; then
 	# quietly exit
 	exit
 else
-	touch lock.$1
+	CONFIG=$1
+	touch lock.$CONFIG
+	shift
 fi
 
-pushd config/$1 > /dev/null
-$PLANET config.ini
+pushd config/$CONFIG > /dev/null
+$PLANET $@ config.ini
 popd > /dev/null
 
-rm -f lock.$1
+rm -f lock.$CONFIG
