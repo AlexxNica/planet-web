@@ -44,12 +44,12 @@ body {
 	color: #000000;
 }
 
-#body {
+#body, #page {
 	margin: 0 190px 0 0;
 	padding: 1.5em 3em 0em 1em;
 }
 
-#body *:first-child {
+#body *:first-child, #page *:first-child {
 	margin-top: 0;
 }
 
