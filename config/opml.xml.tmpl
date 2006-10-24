@@ -9,7 +9,7 @@
 	
 	<body>
 		<TMPL_LOOP Channels>
-		<outline type="rss" text="<TMPL_VAR name ESCAPE="HTML">" xmlUrl="<TMPL_VAR url ESCAPE="HTML">" title="<TMPL_IF title><TMPL_VAR title ESCAPE="HTML"></TMPL_IF><TMPL_UNLESS title><TMPL_VAR name ESCAPE="HTML"></TMPL_UNLESS>"<TMPL_IF channel_link> htmlUrl="<TMPL_VAR channel_link ESCAPE="HTML">"</TMPL_IF> />
+		<outline type="rss" text="<TMPL_VAR name ESCAPE="HTML">" xmlUrl="<TMPL_VAR url ESCAPE="HTML">" title="<TMPL_IF title><TMPL_VAR title ESCAPE="HTML"></TMPL_IF><TMPL_UNLESS title><TMPL_VAR name ESCAPE="HTML"></TMPL_UNLESS>"<TMPL_IF link> htmlUrl="<TMPL_VAR link ESCAPE="HTML">"</TMPL_IF> />
 		</TMPL_LOOP>
 	</body>
 </opml>
