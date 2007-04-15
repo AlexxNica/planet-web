@@ -62,6 +62,11 @@ div.post-contents blockquote {
 	line-height: 150%;
 }
 
+div.post-contents div.delicious-tags {
+	text-align: right;
+	font-size: x-small;
+}
+
 div.post-contents:after {
 	content: "";
 	display: block;
