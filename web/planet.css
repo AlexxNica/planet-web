@@ -105,13 +105,6 @@ div.post-header {
 	background: url(img/bubble/bubble-top.png) top repeat-x;
 }
 
-div.gsoc2007 {
-	background: url(img/gsoc2007.png) top right no-repeat;
-	margin-right: 20px;
-	height: 50px;
-	margin-top: -35px;
-}
-
 div.post-footer {
 	background: url(img/bubble/bubble-bottom.png) bottom repeat-x;
 }

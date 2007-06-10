@@ -66,6 +66,9 @@
 			</TMPL_IF>
 			<TMPL_VAR channel_name><TMPL_IF channel_nick><br />(<TMPL_VAR channel_nick>)</TMPL_IF>
 		</a>
+		<TMPL_IF channel_gsoc2007>
+		<br /><img src="http://planet.gnome.org/heads/logos/gsoc2007.png" />
+		</TMPL_IF>
 	</div>
 	
 		<div class="post">
@@ -77,9 +80,6 @@
 				<div class="post-title"><span>&nbsp;</span></div>
 				</TMPL_IF>
 			</div>
-			<TMPL_IF channel_gsoc2007>
-			<div class="gsoc2007">&nbsp;</div>
-			</TMPL_IF>
 			<div class="post-contents">
 			<TMPL_VAR content>
 			</div>
