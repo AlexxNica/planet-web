@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+
+<channel>
+	<title>BLOCKED FROM PLANET GNOME</title>
+	<link>http://planet.gnome.org/</link>
+	<language>en</language>
+	<description>BLOCKED FROM PLANET GNOME</description>
+
+<item>
+	<title>BLOCKED FROM PLANET GNOME</title>
+	<guid isPermaLink="false">http://planet.gnome.org/splog.xml</guid>
+	<link>http://planet.gnome.org/</link>
+	<description>&lt;h1&gt;This splog has been blocked from &lt;a href="http://planet.gnome.org/"&gt;Planet GNOME.&lt;/a&gt;.&lt;/h1&gt;</description>
+</item>
+
+</channel>
+</rss>
