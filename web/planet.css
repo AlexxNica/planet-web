@@ -23,7 +23,7 @@ div.person-info {
 	padding: 0 1em 0 1em;
 	left: 4px;
 	width: 8em;
-	background: url(http://planet.gnome.org/img/bubble/nipple.png) top right no-repeat;
+	background: url(img/bubble/nipple.png) top right no-repeat;
 	text-align: center;
 }
 
@@ -44,7 +44,7 @@ div.post {
 
 b.cr {
 	position: absolute;
-	background-image: url(http://planet.gnome.org/img/bubble/corners.png);
+	background-image: url(img/bubble/corners.png);
 	width: 50px;
 	height: 50px;
 }
@@ -55,7 +55,7 @@ b.br { bottom: 0px; right: 0px; background-position: bottom right; }
 
 b.vt {
 	position: absolute;
-	background: url(http://planet.gnome.org/img/bubble/vertical.png) repeat-y;
+	background: url(img/bubble/vertical.png) repeat-y;
 	width: 50px;
 	height: 100%;
 }
@@ -64,7 +64,7 @@ b.rt { top: 0px; right: 0px; background-position: top right; }
 
 b.hz {
 	position: absolute;
-	background: url(http://planet.gnome.org/img/bubble/horizontal.png) repeat-x;
+	background: url(img/bubble/horizontal.png) repeat-x;
 	width: 100%;
 	height: 50px;
 }
@@ -103,6 +103,17 @@ b.bo { bottom: 0px; left: 0px; background-position: bottom left; }
 
 .post-contents blockquote {
 	color: #666;
+}
+
+.post-contents ul {
+	margin: none;
+	margin-left: 1em;
+	padding: none;
+}
+.post-contents ul li {
+	margin: 1em;
+	padding: none;
+	list-style-image: url(img/gnome-16.png);
 }
 
 .post-contents .delicious-tags {
