@@ -42,12 +42,9 @@
 	</div>
 	
 		<div class="post">
-		<div class="post2">
 			<div class="post-header">
 				<TMPL_IF title>
-				<h4 class="post-title"><a href="<TMPL_VAR link ESCAPE="HTML">"><TMPL_VAR title></a></h4>
-				<TMPL_ELSE>
-				<div class="post-title"><span>&nbsp;</span></div>
+				<h3 class="post-title"><a href="<TMPL_VAR link ESCAPE="HTML">"><TMPL_VAR title></a></h3>
 				</TMPL_IF>
 			</div>
 			<div class="post-contents">
@@ -56,7 +53,6 @@
 			<div class="post-footer">
 				<p><a href="<TMPL_VAR link ESCAPE="HTML">"><TMPL_VAR date></a></p>
 			</div>
-		</div>
 		</div>
 
 	</div>
