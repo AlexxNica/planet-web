@@ -33,7 +33,7 @@ div.person-info a {
 	font-size: small;
 }
 div.person-info a img {
-	border: none;
+	border: 0px;
 }
 
 div.post {
@@ -98,7 +98,7 @@ b.bo { bottom: 0px; left: 0px; background-position: bottom left; }
 }
 
 .post-contents a img {
-	border: none;
+	border: 0px;
 }
 
 .post-contents blockquote {
@@ -106,13 +106,13 @@ b.bo { bottom: 0px; left: 0px; background-position: bottom left; }
 }
 
 .post-contents ul {
-	margin: none;
+	margin: 0px;
 	margin-left: 1em;
-	padding: none;
+	padding: 0px;
 }
 .post-contents ul li {
 	margin: 1em;
-	padding: none;
+	padding: 0px;
 	list-style-image: url(img/gnome-16.png);
 }
 
