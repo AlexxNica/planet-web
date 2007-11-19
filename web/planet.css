@@ -33,7 +33,6 @@ div.person-info a {
 	font-size: small;
 }
 div.person-info a:hover {
-	text-decoration: underline;
 	color: inherit;
 }
 div.person-info a img {
