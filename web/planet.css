@@ -21,9 +21,9 @@ div.person-info {
 	float: left;
 	margin-top: 25px !important;
 	margin-left: -1em;
-	padding: 0 1.5em 0 1.5em;
+	padding: 0 1.5em 0 1em;
 	left: 4px;
-	width: 8em;
+	width: 8.5em;
 	background: url(img/bubble/nipple.png) top right no-repeat;
 	text-align: center;
 }
