@@ -74,6 +74,7 @@ b.bo { bottom: 0px; left: 0px; background-position: bottom left; }
 .post-title {
 	position: relative;
 	z-index: 1;
+	margin-top: 0px;
 	font-size: large;
 }
 
