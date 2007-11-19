@@ -144,3 +144,10 @@ b.bo { bottom: 0px; left: 0px; background-position: bottom left; }
 	text-decoration: underline;
 	color: inherit;
 }
+
+#copyright {
+	clear: both;
+	padding-bottom: 1em;
+	text-align: center;
+	font-size: small;
+}
