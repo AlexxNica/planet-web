@@ -1,154 +1,133 @@
+body {
+	background-color: white;
+	color: black;
+	font-family: sans-serif;
+}
+
+h2.date {
+	color: #666;
+	font-weight: normal;
+	font-size: large;
+}
+
 div.entry {
 	clear: both;
-	margin-bottom: 2em;
-	margin-right: 1em;
-}
-
-div.entry ul {
-	margin: 0px;
-	margin-left: 1em;
-	padding: 0px;
-}
-
-div.entry ul li {
-	margin: 1em;
-	padding: 0px;
-	list-style-image: url("http://planet.gnome.org/img/gnome-16.png");
 }
 
 div.person-info {
-	float: left;
 	position: relative;
+	z-index: 1;
+	float: left;
+	margin-top: 25px;
+	padding: 0 1em 0 1em;
 	left: 4px;
-	margin-top: 25px!important;
-	padding: 0 20px 30px 0;
-	width: 120px;
-	background: url(img/bubble/bubble-nipple.png) top right no-repeat;
+	width: 8em;
+	background: url(http://planet.gnome.org/img/bubble/nipple.png) top right no-repeat;
 	text-align: center;
 }
 
 div.person-info a {
 	text-decoration: none;
 	color: #666;
+	font-size: small;
+}
+div.person-info a img {
+	border: none;
 }
 
 div.post {
-	background: #fff url(img/bubble/bubble-left.png) left repeat-y;
-	margin-left: 140px;
+	position: relative;
+	margin-left: 10em;
+	padding: 1.5em;
 }
 
-div.post2 {
-	background: url(img/bubble/bubble-right.png) right repeat-y;
+b.cr {
+	position: absolute;
+	background-image: url(http://planet.gnome.org/img/bubble/corners.png);
+	width: 50px;
+	height: 50px;
+}
+b.tl { top: 0px; left: 0px; background-position: top left; }
+b.tr { top: 0px; right: 0px; background-position: top right; }
+b.bl { bottom: 0px; left: 0px; background-position: bottom left; }
+b.br { bottom: 0px; right: 0px; background-position: bottom right; }
+
+b.vt {
+	position: absolute;
+	background: url(http://planet.gnome.org/img/bubble/vertical.png) repeat-y;
+	width: 50px;
+	height: 100%;
+}
+b.lt { top: 0px; left: 0px; background-position: top left; }
+b.rt { top: 0px; right: 0px; background-position: top right; }
+
+b.hz {
+	position: absolute;
+	background: url(http://planet.gnome.org/img/bubble/horizontal.png) repeat-x;
+	width: 100%;
+	height: 50px;
+}
+b.to { top: 0px; left: 0px; background-position: top left; }
+b.bo { bottom: 0px; left: 0px; background-position: bottom left; }
+
+.post-title {
+	position: relative;
+	z-index: 1;
+	margin: 0;
+	font-size: large;
 }
 
-div.post-contents {
-	padding: 0 25px 0 25px;
-	margin-right: 10px;
+.post-title a {
+	text-decoration: none;
 }
 
-div.post-contents p {
+.post-title a:hover {
+	text-decoration: underline;
+}
+
+.post-contents {
+	position: relative;
+	z-index: 1;
 	line-height: 140%;
-	margin-top: 1em!important;
 }
 
-div.post-contents img {
+.post-contents img {
 	width: auto;
 	max-width: 100%;
 	height: auto;
 }
 
-div.post-contents blockquote {
-	color: #666;
-	line-height: 150%;
+.post-contents a img {
+	border: none;
 }
 
-div.post-contents div.delicious-tags {
+.post-contents blockquote {
+	color: #666;
+}
+
+.post-contents .delicious-tags {
 	text-align: right;
 	font-size: x-small;
 }
 
-div.post-contents:after {
+.post-contents:after {
 	content: "";
 	display: block;
 	clear: both;
 }
 
-h4.post-title, div.post-title {
-	background: url(img/bubble/bubble-top-left.png) top left no-repeat;
-	margin: 1em 0 0 0;
-}
-
-h4.post-title a, div.post-title span {
-	display: block;
-	background: url(img/bubble/bubble-top-right.png) top right no-repeat;
-	padding: 22px 25px 0 25px;
-	font-weight: normal;
-	font-size: 140%;
-	text-decoration: none;
-}
-
-h4.post-title a:hover {
-	text-decoration: underline;
-}
-
-div.post-title span {
-	display: block;
-	height: 20px;
-	font-size: 100%;
-}
-
-div.post-title {
-	display: block;
-}
-
-div.post-header {
-	background: url(img/bubble/bubble-top.png) top repeat-x;
-}
-
-div.post-footer {
-	background: url(img/bubble/bubble-bottom.png) bottom repeat-x;
-}
-
-div.post-footer p {
-	background: url(img/bubble/bubble-bottom-left.png) bottom left no-repeat;
+.post-footer p {
+	position: relative;
+	z-index: 1;
 	margin: 0;
-}
-
-div.post-footer p a {
-	display: block;
-	background: url(img/bubble/bubble-bottom-right.png) bottom right no-repeat;
-	padding: 15px 20px 20px 25px;
-	text-align: right;
-	font-size: 85%;
-	color: #999;
-	text-decoration: none;
-}
-
-div.post-footer p a:hover {
-	color: inherit;
-	text-decoration: underline;
-}
-
-h2.date {
-	color: #666;
-	font-weight: normal;
-	font-size: 130%;
-	padding-left: 10px;
-}
-
-#sidebar ul li {
 	font-size: small;
+	text-align: right;
 }
-
-#sidebar ul li a {
+.post-footer p a {
 	text-decoration: none;
-}
-
-#sidebar ul li a:hover {
-	text-decoration: underline;
-}
-
-#sidebar .message {
-	cursor: help;
 	color: #666;
+}
+.post-footer p a:hover {
+	text-decoration: underline;
+	color: inherit;
 }
