@@ -20,9 +20,10 @@ div.person-info {
 	z-index: 1;
 	float: left;
 	margin-top: 25px !important;
+	margin-left: -1em;
 	padding: 0 1em 0 1em;
 	left: 4px;
-	width: 8em;
+	width: 9em;
 	background: url(img/bubble/nipple.png) top right no-repeat;
 	text-align: center;
 }
