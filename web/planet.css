@@ -34,6 +34,7 @@ div.person-info a {
 }
 div.person-info a img {
 	border: 0px;
+	margin-bottom: 1ex;
 }
 
 div.post {
