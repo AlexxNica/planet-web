@@ -101,7 +101,7 @@ b.bo { bottom: 0px; left: 0px; background-position: bottom left; }
 	border: 0px;
 }
 
-.post-contents blockquote {
+.post-contents blockquote, .post-contents pre code {
 	color: #777;
 	margin: auto 1em auto 1em;
 	padding-left: 1em;
