@@ -1,5 +1,5 @@
 h2.date {
-	color: #666;
+	color: #777;
 	font-weight: normal;
 	font-size: large;
 }
@@ -24,7 +24,7 @@ div.person-info {
 
 div.person-info a {
 	text-decoration: none;
-	color: #666;
+	color: #777;
 	font-size: small;
 }
 div.person-info a:hover {
@@ -102,7 +102,10 @@ b.bo { bottom: 0px; left: 0px; background-position: bottom left; }
 }
 
 .post-contents blockquote {
-	color: #666;
+	color: #777;
+	margin: auto 1em auto 1em;
+	padding-left: 1em;
+	border-left: 5px solid #ddd;
 }
 
 .post-contents ul {
@@ -136,7 +139,7 @@ b.bo { bottom: 0px; left: 0px; background-position: bottom left; }
 }
 .post-footer p a {
 	text-decoration: none;
-	color: #666;
+	color: #777;
 }
 .post-footer p a:hover {
 	text-decoration: underline;
