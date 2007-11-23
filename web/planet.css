@@ -134,6 +134,9 @@ b.bo { bottom: 0px; left: 0px; background-position: bottom left; }
 	clear: both;
 }
 
+.post-footer {
+	margin-top: 1em;
+}
 .post-footer p {
 	position: relative;
 	z-index: 1;
