@@ -101,14 +101,14 @@ b.bo { bottom: 0px; left: 0px; background-position: bottom left; }
 	border: 0px;
 }
 
-.post-contents blockquote, .post-contents pre {
+.post-contents blockquote, .post-contents pre, .post-contents code {
 	color: #777;
 	margin: auto 1em auto 1em;
 	padding-left: 1em;
 	border-left: 5px solid #ddd;
 }
 
-.post-contents pre {
+.post-contents pre, .post-contents code {
 	overflow: auto;
 }
 
