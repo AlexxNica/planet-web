@@ -42,11 +42,9 @@
 <div id="body">
 
 
-<!--<div style="border: 1px solid #e0e0df; background-color: #fffff0; padding: 0.5em 1em 0.5em 1em; padding-left: 60px; min-height: 50px; background-position: 6px 0.5em; background-repeat: no-repeat; background-image: url(http://library.gnome.org/skin/admon-note.png); margin-bottom: 2em; width: 50%; margin-left: auto; margin-right: auto;">
-If Planet GNOME looks a little broken today, please hit <tt>Ctrl-Shift-R</tt>
-to force a reload, and everything should go back to normal. Nothing to see
-here... Move along! <img src="http://blogs.gnome.org/wp-content/mu-plugins/tango-smilies/face-smile.png" alt=":-)" class="wp-smiley" height="16" width="16">
-</div>-->
+<div style="border: 1px solid #e0e0df; background-color: #fffff0; padding: 0.5em 1em 0.5em 1em; padding-left: 60px; min-height: 50px; background-position: 6px 0.5em; background-repeat: no-repeat; background-image: url(http://library.gnome.org/skin/admon-note.png); margin-bottom: 2em; width: 50%; margin-left: auto; margin-right: auto;">
+<b>Upgrade in progress.</b> Planet GNOME might look a bit weird for a while, but will be back to normal very soon. Thanks!<img src="http://blogs.gnome.org/wp-content/mu-plugins/tango-smilies/face-smile.png" alt=":-)" class="wp-smiley" height="16" width="16">
+</div>
 
 
 <TMPL_LOOP Items>
@@ -155,7 +153,7 @@ Ac0gv0y410u0"></script>
 	<h3>Feeds</h3>
 	<ul>
 	<TMPL_LOOP Channels>
-	<li><a href="<TMPL_VAR url ESCAPE="HTML">" title="subscribe"><img src="http://planet.gnome.org/img/feed-icon-10x10.png" alt="(feed)"></a> <a <TMPL_IF link>href="<TMPL_VAR link ESCAPE="HTML">" </TMPL_IF><TMPL_IF message>class="message" title="<TMPL_VAR message ESCAPE="HTML">"</TMPL_IF><TMPL_UNLESS message>title="<TMPL_VAR title_plain ESCAPE="HTML">"</TMPL_UNLESS>><TMPL_VAR name></a></li>
+	<li><a <TMPL_IF url>href="<TMPL_VAR url ESCAPE="HTML">" </TMPL_IF>title="Subscribe"><img src="http://planet.gnome.org/img/feed-icon-10x10.png" alt="(feed)"></a> <a <TMPL_IF link>href="<TMPL_VAR link ESCAPE="HTML">" </TMPL_IF><TMPL_IF message>class="message" title="<TMPL_VAR message ESCAPE="HTML">"</TMPL_IF><TMPL_UNLESS message>title="<TMPL_VAR title_plain ESCAPE="HTML">"</TMPL_UNLESS>><TMPL_VAR name></a></li>
 	</TMPL_LOOP>
 	</ul>
 	</div>
