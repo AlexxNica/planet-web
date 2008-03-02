@@ -160,7 +160,7 @@ Ac0gv0y410u0"></script>
 	</TMPL_IF>
 	<TMPL_IF link>
 	<a href="<TMPL_VAR link ESCAPE="HTML">" <TMPL_IF message>class="message" title="<TMPL_VAR message ESCAPE="HTML">"</TMPL_IF><TMPL_UNLESS message>title="<TMPL_VAR title_plain ESCAPE="HTML">"</TMPL_UNLESS>><TMPL_VAR name></a>
-	</TMPL_ELSE>
+	<TMPL_ELSE>
 	<span <TMPL_IF message>class="message" title="<TMPL_VAR message ESCAPE="HTML">"</TMPL_IF><TMPL_UNLESS message>title="<TMPL_VAR title_plain ESCAPE="HTML">"</TMPL_UNLESS>><TMPL_VAR name></span>
 	</TMPL_IF>
 	</li>
