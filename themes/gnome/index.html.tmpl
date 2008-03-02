@@ -41,11 +41,9 @@
 
 <div id="body">
 
-
-<div style="border: 1px solid #e0e0df; background-color: #fffff0; padding: 0.5em 1em 0.5em 1em; padding-left: 60px; min-height: 50px; background-position: 6px 0.5em; background-repeat: no-repeat; background-image: url(http://library.gnome.org/skin/admon-note.png); margin-bottom: 2em; width: 50%; margin-left: auto; margin-right: auto;">
-<b>Upgrade in progress.</b> Planet GNOME might look a bit weird for a while, but will be back to normal very soon. Thanks!<img src="http://blogs.gnome.org/wp-content/mu-plugins/tango-smilies/face-smile.png" alt=":-)" class="wp-smiley" height="16" width="16">
-</div>
-
+<TMPL_IF banner_message>
+<div style="border: 1px solid #e0e0df; background-color: #fffff0; padding: 0.5em 1em 0.5em 1em; padding-left: 60px; min-height: 50px; background-position: 6px 0.5em; background-repeat: no-repeat; background-image: url(http://library.gnome.org/skin/admon-note.png); margin-bottom: 2em; width: 50%; margin-left: auto; margin-right: auto;"><TMPL_VAR banner_message></div>
+</TMPL_IF>
 
 <TMPL_LOOP Items>
 	<TMPL_IF new_date>
