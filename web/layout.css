@@ -115,6 +115,7 @@ body {
 #sidebar div.section li {
 	padding: 0px;
 	margin: 0px;
+	font-size: small;
 }
 
 #sidebar div.section p {
