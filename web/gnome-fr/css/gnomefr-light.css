@@ -1,0 +1,63 @@
+/* planet stuff */
+
+.planetPostAuthor {
+	background-color: #eeeeee;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-bottom: 0px;
+	padding: 5px;
+	clear: both;
+	font-weight: bold;
+	border: 1px solid #9db8d2;
+}
+
+.planetPostTitle {
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding: 5px;
+	font-weight: bold;
+	border-bottom: 1px solid #9db8d2;
+}
+
+.planetPostAuthor a, .planetPostTitle a {
+        color: black;
+        text-decoration: none;
+}
+
+img.face {
+	float: right;
+	margin-top: -1.5em;
+	margin-right: 1em;
+	padding-left: 1em;
+}
+
+.planetPost {
+	margin: 15px;
+	margin-bottom: 20px;
+	margin-top: 7px;
+	text-align: justify;
+}
+
+.planetPost img {
+	border: 0px;
+	clear: below;
+	padding: 8px;
+	margin: 0px;
+}
+
+a.planetPermalink {
+	color: #aaaaaa;
+	font-size: small;
+	text-decoration: none;
+	font-style: italic;
+}
+
+.planetDate {
+	color: white;
+	background-color: black;
+	font-weight: bold;
+	padding: 8px 5px 8px 5px;
+	clear: both;
+}
