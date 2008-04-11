@@ -7,8 +7,8 @@
  *  Decoration
  *  Separators
  */
-body * {
-  font-family: verdana, arial, sans-serif;
+body {
+  font-family: verdana,  sans-serif;
 }
 
 div#content {
