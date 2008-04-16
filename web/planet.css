@@ -91,6 +91,11 @@ b.bo { bottom: 0px; left: 0px; background-position: bottom left; }
 	line-height: 140%;
 }
 
+.post-contents h2, .post-contents h3, .post-contents h4 {
+	font-size: 100%;
+	font-weight: bold;
+}
+
 .post-contents img {
 	width: auto;
 	max-width: 100%;
