@@ -168,7 +168,7 @@ input.searchButton {
 /* Sidebar */
 
 #infos {
-	background: black;
+	background: black url(http://planet.gnome.org/img/footer-bg.png) repeat-x left top;
 	color: #ddd;
 }
 
