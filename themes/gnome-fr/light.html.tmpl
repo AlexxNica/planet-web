@@ -37,6 +37,7 @@
           <li class="selected">
 	    <a href="light.html"><span title="(plus légère !)">Version sans images</span></a>
 	  </li>
+          <li><a href="#sources"><span>À propos de la planète</span></a></li>
         </ul>
       </div> <!-- end of #tabs -->
     </div> <!-- end of #header -->
@@ -69,28 +70,8 @@
 </TMPL_LOOP>
 </div>
 
-<div id="sidebar">
-	<div class="section">
-	<h3>Planète GNOME-FR</h3>
-	<p>Planète GNOME-FR est un aperçu de la vie, du travail et plus généralement du monde des membres de la communauté <a href="http://www.gnomefr.org/">GNOME-FR</a>.</p>
 
-	<p>Certains billets sont rédigés en anglais car nous collaborons avec des gens du monde entier.</p>
-
-	<p><strong>Dernière mise à jour :</strong><br /><TMPL_VAR date> UTC<br /><em>Toutes les heures sont UTC.</em></p>
-        </div>
-
-        <div class="section">
-	<h3>S'abonner</h3>
-	<ul>
-		<li><a href="atom.xml">Atom 1.0</a></li>
-		<li><a href="rss20.xml">RSS 2.0</a></li>
-		<li><a href="rss10.xml">RSS 1.0</a></li>
-		<li><a href="foafroll.xml">FOAF</a></li>
-		<li><a href="opml.xml">OPML</a></li>
-	</ul>
-        </div>
-
-        <div class="section">
+<div id="sources">
 	<h3>Sources</h3>
 	<ul>
 	<TMPL_LOOP Channels>
@@ -108,6 +89,17 @@
 	</li>
 	</TMPL_LOOP>
 	</ul>
+</div>
+
+
+<div id="infos">
+	<div class="section">
+	<h3>Planète GNOME-FR</h3>
+	<p>Planète GNOME-FR est un aperçu de la vie, du travail et plus généralement du monde des membres de la communauté <a href="http://www.gnomefr.org/">GNOME-FR</a>.</p>
+
+	<p>Certains billets sont rédigés en anglais car nous collaborons avec des gens du monde entier.</p>
+
+	<p><strong>Dernière mise à jour :</strong><br /><TMPL_VAR date> UTC<br /><em>Toutes les heures sont UTC.</em></p>
         </div>
 
         <div class="section">
@@ -117,20 +109,68 @@
 
 	<p>Le design du site est basé sur celui des sites GNOME et de <a href="http://planet.gnome.org/">Planet GNOME</a>.</p>
 
-	<p>Planète GNOME-FR est maintenue par <a href="mailto:vuntz@gnome.org">Vincent Untz</a> et <a href="mailto:fpeters@0d.be">Frédéric Péters</a>. Si vous souhaitez ajouter votre blog à cette planète, il vous suffit d'<a href="http://bugzilla.gnome.org/enter_bug.cgi?product=website&amp;component=planete.gnomefr.org">ouvrir un bug</a>. N'hésitez pas à nous contacter par mail pour toute autre question.</p>
+	<p>Planète GNOME-FR est maintenue par <a href="mailto:vuntz@gnome.org">Vincent Untz</a> et <a href="mailto:fpeters@0d.be">Frédéric Péters</a>. Si vous souhaitez ajouter votre blog à cette planète, il vous suffit d'<a href="http://bugzilla.gnome.org/enter_bug.cgi?product=website&amp;component=planete.gnomefr.org">ouvrir un bug</a>. N'hésitez pas à nous contacter par courriel pour toute autre question.</p>
         </div>
+
+
+        <div class="section">
+	
+	<h3>Autres planètes</h3>
+
+	<ul>
+	  <li class="pgo-top-list"><a href="http://planet.gnome.org">Planet GNOME</a></li>
+	  <li><a href="http://planet.gnome-ev.de/">Allemagne</a></li>
+	  <li><a href="http://www.gnomebangalore.org/?q=blog">Bangalore, Inde</a></li>
+	  <li><a href="http://br.gnome.org/">Brésil</a></li>
+	  <li><a href="http://gnome.cult.bg/">Bulgarie</a></li>
+	  <li><a href="http://planeta.gnome.cl/">Chili</a></li>
+	  <li><a href="http://gnome.or.kr/pgk/">Corée</a></li>
+	  <li><a href="http://planeta.es.gnome.org/">Espagnne</a></li>
+	  <li><a href="http://planet.gnome.gr/">Grèce</a></li>
+	  <li><a href="http://it.gnome.org/planet/">Italie</a></li>
+	  <li><a href="http://planet.nl.gnome.org/">Pays-Bas</a></li>
+	  <li><a href="http://www.uk.gnome.org/planet/">Royaume-Uni</a></li>
+	  <li><a href="http://www.gnome.org.tr/">Turquie</a></li>
+
+	</ul>
+
+        </div>
+
+
+
+        <div class="section subscribe">
+	<h3>S'abonner</h3>
+	<ul>
+		<li><a href="atom.xml">Atom 1.0</a></li>
+		<li><a href="rss20.xml">RSS 2.0</a></li>
+		<li><a href="foafroll.xml">FOAF</a></li>
+		<li><a href="opml.xml">OPML</a></li>
+	</ul>
+        </div>
+
+<div id="footer">
+<p>
+ Copyright &copy; 2005, 2006, 2007, 2008 <a href="http://www.gnome.org/">Le Projet GNOME</a>
+</p>
+<p>
+Les billets de blog agrégés sur cette page appartiennent à leurs auteurs respectifs et les opinions exprimées n'engagent que leurs auteurs.
+</p>
+
+<p>
+<a href="http://validator.w3.org/check/referer">Optimisé</a> pour les
+<a href="http://www.w3.org/">standards</a>.
+<br />
+Hébergé par <a href="http://redhat.com/">Red Hat</a>.
+</p>
+</div>
+
+<hr />
+
 </div>
 </div>
 
-<div id="footer">
-<p>Copyright &copy; 2005, 2006, 2007, 2008 <a href="http://www.gnome.org/">Le Projet GNOME</a>
-<br />
-Les billets de blog agrégés sur cette page appartiennent à leurs auteurs respectifs et les opinions exprimées n'engagent que leurs auteurs.
-<br />
-<a href="http://validator.w3.org/check/referer">Optimisé</a> pour les
-<a href="http://www.w3.org/">standards</a>. Hébergé par
-<a href="http://redhat.com/">Red Hat</a>.</p>
-</div>
+
+
 
 </body>
 

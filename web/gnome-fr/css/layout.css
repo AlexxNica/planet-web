@@ -7,7 +7,7 @@ body {
 }
 
 .body {
-	margin: 90px 230px 0px 0px;
+	margin: 90px 0px 0px 0px;
 	padding: 0px;
 }
 
@@ -167,62 +167,71 @@ input.searchButton {
 
 /* Sidebar */
 
-#sidebar {
-	position: absolute;
-	top: 60px;
-	margin-top: 4em;
-	right: 0px;
-	width: 242px;
-
-	/*margin-right: 10px;*/
-	/*padding-right: 10px; */
-	padding-bottom: 0px;
-	border-left: 1px dashed #dddddd;
-	background-color: #ffffff;
+#infos {
+	background: black;
+	color: #ddd;
 }
 
-#sidebar div.section {
-	width: 210px;
+#infos hr {
+	clear: both;
+}
+
+#infos div.section {
+	width: 20%;
 	padding: 1em;
-	border-top: 1px solid #ffffff;
-	border-bottom: 1px solid #d9d9d9;
+	float: left;
 }
 
-#sidebar div.section h3 {
+#infos div.section.subscribe {
+	float: right;
+	text-align: right;
+}
+
+#infos div.section h3 {
 	font-weight: bold;
 	font-size: 110%;
+	color: inherit;
 }
 
-#sidebar *:first-child {
+#infos *:first-child {
 	margin-top: 0;
 }
 
-#sidebar *:last-child {
+#infos *:last-child {
 	margin-bottom: 0;
 }
 
-#sidebar div.section ul {
+#infos div.section ul {
 	padding: 0px;
 	margin: 0px;
 	font-size: small;
 	list-style-type: none;
 }
 
-#sidebar div.section ul ul {
+#infos div.section ul ul {
 	padding-left: 1.5em;
 	list-style-type: square;
 }
 
-#sidebar div.section li {
+#infos div.section li {
 	padding: 0px;
 	margin: 0px;
 }
 
-#sidebar div.section p {
+#infos div.section p {
 	font-size: small;
 }
 
 /* Copyright footer */
+
+#footer {
+	float: right;
+	width: 25%;
+	font-size: small;
+	text-align: right;
+	margin-right: 1em;
+	margin-top: 4em;
+}
 
 #copyright {
 	text-align: center;
@@ -301,24 +310,6 @@ div.body {
 	clear: both;
 }
 
-
-div.sidebar {
-	position: absolute;
-	text-align: left;
-	right: 0px;
-	top: 60px;
-	width: 27ex;
-	padding-left: 1ex;
-	border-left: 1ex solid #eee;
-	margin-top: 4em;
-}
-
-div.sidebar h2 {
-	margin-top: 0;
-	padding: 5px 2ex 5px 2ex;
-	background: url(t.png) top left repeat-y;
-	font-size: 100%;
-}
 
 ul.toc {
 	padding: 0;
@@ -463,3 +454,26 @@ div#content {
 	margin: 0em;
 }
 
+div#sources {
+	background: #eee;
+	padding-bottom: 1em;
+}
+
+div#sources h3 {
+	background: #e1e1e1;
+	padding: 1ex;
+}
+
+div#sources ul {
+	list-style: none;
+	margin-left: 0;
+	padding-left: 1em;
+	margin-bottom: 0;
+
+	-webkit-column-width: 10em;
+	-webkit-column-gap: 1em;
+	-moz-column-width: 10em;
+	-moz-column-gap: 1em;
+	column-width: 10em;
+	column-gap: 1em;
+}

@@ -14,14 +14,20 @@ body {
 div#content {
 }
 
-div#sidebar a,
+div#infos a,
+div#sources a,
 div#content a {
 	color: #3465a4;
 	border-bottom: 1px dotted #888;
 	text-decoration: none;
 }
 
-div#sidebar a:hover,
+div#infos a {
+	font-weight: bold;
+	color: #729fcf;
+}
+
+div#infos a:hover,
 div#content a:hover {
 	border-bottom: 1px solid #888;
 }
@@ -124,15 +130,6 @@ input[type=radio] {
 
 /* footer */
 
-#footer {
-	text-align: center;
-	margin: 3em 3em 1em 3em;
-	border-top: 1px solid gray;
-	padding-top: 1.5em;
-	color: #888;
-	font-size: 80%;
-}
-
 #footer ul {
 	margin: 0;
 	padding: 0;
@@ -164,5 +161,18 @@ div#content div.person-info a,
 div#content div.post-footer a,
 div#content h4.post-title a {
 	border: 0;
+}
+
+div#content p.planetPostAuthor a,
+div#content p.planetPostTitle a,
+div#content div.person-info a,
+div#content div.post-footer a {
+	color: #777;
+}
+
+
+
+div#infos li.pgo-top-list {
+	margin-bottom: 1ex;
 }
 
