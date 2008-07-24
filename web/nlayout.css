@@ -242,6 +242,7 @@ div.breadcrumb {
 #feedlist ul li a {
 	color: #000;
 	text-decoration: none;
+	font-size: 90%;
 }
 #feedlist ul li a.message {
 	color: #999;
@@ -253,6 +254,9 @@ div.breadcrumb {
 	margin-right: 0.2em;
 	border: 0px;
 	clear: below;
+}
+#feedlist ul li input {
+	margin-right: 0.2em;
 }
 
 #footer {
