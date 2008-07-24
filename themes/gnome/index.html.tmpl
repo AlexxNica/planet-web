@@ -16,11 +16,41 @@
 
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>
 	<script type="text/javascript">
+	function toggleFeeds() {
+		$("#feedlist").slideToggle(function() {
+			$("#feeds h3").toggleClass("open");
+		});
+	}
 	$(document).ready(function() {
+		var hidden = $.cookie("hidden") ? $.cookie("hidden").split(",") : new Array();
+		// hide posts by disabled folks
+		if (hidden.length > 0) for (i in hidden) {
+			$("div." + hidden[i]).hide();
+		}
 		$("#feeds h3 a").click(function(e) {
 			e.preventDefault();
 			if ($("#feedlist ul").length == 0) {
 				$("#feedlist").load('feeds.html', '', function(r,t,x) {
+					$('<input type="checkbox" checked>')
+						.change(function() {
+							var nick = $(this).parent().attr("class");
+							var i = $.inArray(nick, hidden);
+							if ($(this).attr("checked")) {
+								if (hidden[i]) hidden.splice(i, 1);
+								$("div." + nick).show();
+							} else {
+								if (!hidden[i]) hidden[hidden.length] = nick;
+								$("div." + nick).hide();
+							}
+							$.cookie("hidden", hidden.join(","),
+								{expires: 365});
+						})
+						.prependTo("#feedlist ul li");
+					// remove checks from disabled folks
+					for (i in hidden) {
+						$("#feedlist ul li." + hidden[i] + " input")
+							.removeAttr("checked");
+					}
 					toggleFeeds();
 				});
 			} else {
@@ -28,11 +58,6 @@
 			}
 		});
 	});
-	function toggleFeeds() {
-		$("#feedlist").slideToggle(function() {
-			$("#feeds h3").toggleClass("open");
-		});
-	}
 	</script>
 </head>
 
