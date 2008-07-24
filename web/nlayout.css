@@ -243,6 +243,9 @@ div.breadcrumb {
 	color: #000;
 	text-decoration: none;
 }
+#feedlist ul li a.message {
+	color: #999;
+}
 #feedlist ul li a:hover {
 	text-decoration: underline;
 }
