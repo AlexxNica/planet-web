@@ -192,7 +192,9 @@ div.breadcrumb {
 
 /* Content */
 #content {
-	margin: 1em;
+	margin: 0px auto 0px auto;
+	padding: 0px 1em 0px 1em;
+	max-width: 65em;
 }
 
 #content h1.title {
