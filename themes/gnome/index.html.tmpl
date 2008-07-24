@@ -1,184 +1,178 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 
-
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title><TMPL_VAR name></title>
-	<link rel="stylesheet" href="http://planet.gnome.org/generic.css" type="text/css">
-	<link rel="stylesheet" href="http://planet.gnome.org/layout.css" type="text/css">
-	<link rel="stylesheet" href="http://planet.gnome.org/planet.css" type="text/css">
-	<link rel="stylesheet" href="http://blogs.gnome.org/wp-content/mu-plugins/bug-links/bug-links.css" type="text/css">
 
-	<link rel="icon" type="image/png" href="http://planet.gnome.org/img/gnome-16.png">
-	<link rel="SHORTCUT ICON" type="image/png" href="http://planet.gnome.org/img/gnome-16.png">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link rel="shortcut icon" type="image/png" href="http://planet.gnome.org/img/gnome-16.png">
 	<link rel="alternate" type="application/atom+xml" title="Planet GNOME Atom 1.0" href="http://planet.gnome.org/atom.xml">
 	<link rel="alternate" type="application/rss+xml" title="Planet GNOME RSS 2.0" href="http://planet.gnome.org/rss20.xml">
-</head>
 
+	<link rel="stylesheet" href="http://planet.gnome.org/nlayout.css" type="text/css">
+	<link rel="stylesheet" href="http://planet.gnome.org/planet.css" type="text/css">
+	<link rel="stylesheet" href="http://planet.gnome.org/generic.css" type="text/css">
+	<link rel="stylesheet" href="http://blogs.gnome.org/wp-content/mu-plugins/bug-links/bug-links.css" type="text/css">
+
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function() {
+		$("#feeds h3 a").click(function(e) {
+			e.preventDefault();
+			if ($("#feedlist ul").length == 0) {
+				$("#feedlist").load('feeds.html', '', function(r,t,x) {
+					toggleFeeds();
+				});
+			} else {
+				toggleFeeds();
+			}
+		});
+	});
+	function toggleFeeds() {
+		$("#feedlist").slideToggle(function() {
+			$("#feeds h3").toggleClass("open");
+		});
+	}
+	</script>
+</head>
 
 <body>
 
 
-<div id="hdr">
-	<div id="banner"><img src="http://planet.gnome.org/img/spacer" alt=""></div>
-	<div id="logo"><a
-		href="./"><img
-		src="http://planet.gnome.org/img/spacer" alt="Home"></a></div>
-
-    <div id="hdrNav">
-<a href="http://www.gnome.org/about/">About GNOME</a> &middot;
-<a href="http://www.gnome.org/start/stable/">Download</a> &middot;
-<!--<a href="http://www.gnome.org/start/"><i>Get Involved!</i></a> &middot;-->
-<a href="http://www.gnome.org/"><b>Users</b></a> &middot;
-<a href="http://art.gnome.org/">Art &amp; Themes</a> &middot;
-<a href="http://developer.gnome.org/">Developers</a> &middot;
-<a href="http://foundation.gnome.org/">Foundation</a> &middot;
-<a href="http://www.gnome.org/contact/">Contact</a>
-    </div>
-</div>
+<div id="gnome-sites">
+<ul><li class="home"><a href="http://www.gnome.org/" title="Home">Home</a></li><li><a href="http://news.gnome.org" title="News">News</a></li><li><a href="http://www.gnome.org/projects/" title="Projects">Projects</a></li><li><a href="http://art.gnome.org" title="Art">Art</a></li><li><a href="http://www.gnome.org/support/" title="Support">Support</a></li><li><a href="http://developer.gnome.org" title="Development">Development</a></li><li><a href="http://www.gnome.org/community/" title="Community">Community</a></li></ul>
+</div> <!-- /gnome-sites -->
 
 
-<div id="body">
+<div id="page">
+
+
+<div id="header">
+
+<!-- Google CSE Search Box Begins -->
+<div id="search">
+<form id="searchbox_007525575524326405779:c0gv0y410u0" action="http://www.google.com/cse">
+<input type="hidden" name="cx" value="007525575524326405779:c0gv0y410u0">
+<input name="q" type="text" size="15">
+<!--<input type="submit" name="sa" value="Search">-->
+<input type="hidden" name="cof" value="FORID:0">
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=searchbox_007525575524326405779%3Ac0gv0y410u0"></script>
+</div> <!-- /search -->
+<!-- Google CSE Search Box Ends -->
+
+<div id="masthead">
+<a href="/" title="Home" rel="home"><img src="http://ideas.perkypants.org/sites/all/themes/gnome/logo.png" alt="Home" id="site-logo"></a>
+<div id="site-title">
+<p id="site-name"><a href="/" title="Home" rel="home">Planet GNOME</a></p>
+<p id="site-slogan">24 hours a day, 7 days a week, 365 days per year<span title="366 days per leap year" style="cursor: pointer;">*</span>, this is... Planet GNOME!</p>
+</div> <!-- /site-title -->
+<a id="footer-link" href="#footer">About Planet GNOME</a>
+</div> <!-- /masthead -->
+
+</div> <!-- /header -->
+
+
+<div id="content">
 
 <TMPL_IF banner_message>
-<div style="border: 1px solid #e0e0df; background-color: #fffff0; padding: 0.5em 1em 0.5em 1em; padding-left: 60px; min-height: 50px; background-position: 6px 0.5em; background-repeat: no-repeat; background-image: url(http://library.gnome.org/skin/admon-note.png); margin-bottom: 2em; width: 50%; margin-left: auto; margin-right: auto;"><TMPL_VAR banner_message></div>
+<div class="banner"><TMPL_VAR banner_message></div>
 </TMPL_IF>
 
 <TMPL_LOOP Items>
-	<TMPL_IF new_date>
-		<h2 class="date"><TMPL_VAR new_date></h2>
-	</TMPL_IF>
 
-	<div class="entry<TMPL_IF channel_nick> <TMPL_VAR channel_nick></TMPL_IF>">
-	
-	<div class="person-info">
-		<a href="<TMPL_VAR channel_link ESCAPE="HTML">" title="<TMPL_VAR channel_title ESCAPE="HTML">">
-			<TMPL_IF channel_face>
-				<img class="face" src="<TMPL_VAR channel_face ESCAPE="HTML">" alt=""><br />
-			<TMPL_ELSE>
-				<img class="face" src="http://planet.gnome.org/heads/nobody.png" alt=""><br />
-			</TMPL_IF>
-			<TMPL_VAR channel_name>
-			<TMPL_IF channel_real><br /><TMPL_VAR channel_real></TMPL_IF>
-			<TMPL_IF channel_nick><br />(<TMPL_VAR channel_nick>)</TMPL_IF>
-		</a>
-		<TMPL_IF channel_gsoc2008>
-		<p><a href="http://www.gnome.org/projects/soc/" title="Google Summer of Code 2008"><img src="http://planet.gnome.org/heads/logos/gsoc2008.png" alt="GSoC 2008" /></a></p>
-		</TMPL_IF>
-	</div>
-	
-		<div class="post">
-			<div class="post-header">
-				<TMPL_IF title>
-				<h3 class="post-title"><a href="<TMPL_VAR link ESCAPE="HTML">"><TMPL_VAR title></a></h3>
-				</TMPL_IF>
-			</div>
-			<div class="post-contents">
-			<TMPL_VAR content>
-			</div>
-			<div class="post-footer">
-				<p><a href="<TMPL_VAR link ESCAPE="HTML">"><TMPL_VAR date></a></p>
-			</div>
-			<b class="vt lt"></b><b class="vt rt"></b><b class="hz to"></b><b class="hz bo"></b>
-			<b class="cr tl"></b><b class="cr tr"></b><b class="cr bl"></b><b class="cr br"></b>
-		</div>
+<TMPL_IF new_date>
+<h2 class="date"><TMPL_VAR new_date></h2>
+</TMPL_IF>
 
-	</div>
+<div class="entry<TMPL_IF channel_nick> <TMPL_VAR channel_nick></TMPL_IF>">
+
+<div class="person-info">
+<a href="<TMPL_VAR channel_link ESCAPE="HTML">" title="<TMPL_VAR channel_title ESCAPE="HTML">"><TMPL_IF channel_face><img class="face" src="<TMPL_VAR channel_face ESCAPE="HTML">" alt=""><br><TMPL_ELSE><img class="face" src="http://planet.gnome.org/heads/nobody.png" alt=""><br></TMPL_IF><TMPL_VAR channel_name><TMPL_IF channel_real><br><TMPL_VAR channel_real></TMPL_IF><TMPL_IF channel_nick><br>(<TMPL_VAR channel_nick>)</TMPL_IF></a>
+<TMPL_IF channel_gsoc2008><p><a href="http://www.gnome.org/projects/soc/" title="Google Summer of Code 2008"><img src="http://planet.gnome.org/heads/logos/gsoc2008.png" alt="GSoC 2008" /></a></p></TMPL_IF>
+</div>
+
+<div class="post">
+
+<div class="post-header">
+<TMPL_IF title><h3 class="post-title"><a href="<TMPL_VAR link ESCAPE="HTML">"><TMPL_VAR title></a></h3></TMPL_IF>
+</div> <!-- /post-header -->
+
+<div class="post-contents">
+<TMPL_VAR content>
+</div> <!-- /post-contents -->
+
+<div class="post-footer">
+<p><a href="<TMPL_VAR link ESCAPE="HTML">"><TMPL_VAR date></a></p>
+</div> <!-- /post-footer -->
+
+<b class="vt lt"></b><b class="vt rt"></b><b class="hz to"></b><b class="hz bo"></b>
+<b class="cr tl"></b><b class="cr tr"></b><b class="cr bl"></b><b class="cr br"></b>
+
+</div> <!-- /post -->
+
+</div> <!-- /entry -->
+
 </TMPL_LOOP>
+
+</div> <!-- /content -->
+
+
+<div id="feeds">
+	<h3><a href="feeds.html">Feeds</a></h3>
+	<div id="feedlist"></div>
 </div>
 
+<div id="footer">
 
-<div id="sidebar">
-	<div class="section">
-	<h3>Planet GNOME</h3>
-	<p>Planet GNOME is a window into the world, work and lives of GNOME <a href="http://planet.gnome.org/heads/">hackers and contributors</a>.</p>
-	<p>Updated on <TMPL_VAR date> UTC. Entries are normalised to UTC time.</p>
-	<p>Don't like what someone usually posts?  <a href="http://live.gnome.org/PlanetGnome">Remove them</a> from your personal display of Planet GNOME.</p>
-	</div>
+<div class="column">
+<div class="section">
+<h3>Planet GNOME</h3>
+<p><b>Planet GNOME is a window into the world, work and lives of GNOME <a href="http://planet.gnome.org/heads/">hackers and contributors</a>.</b></p>
 
-	<div class="section">
-	<h3>Search</h3>
-	<p>Customised search for Planet GNOME contributor blogs.</p>
-<!-- Google CSE Search Box Begins -->
- <form id="searchbox_007525575524326405779:c0gv0y410u0"
-action="http://www.google.com/cse">
-   <input type="hidden" name="cx" value="007525575524326405779:c0gv0y410u0"
-   />
-   <input name="q" type="text" size="15" />
-   <input type="submit" name="sa" value="Search" />
-   <input type="hidden" name="cof" value="FORID:0" />
- </form>
- <script type="text/javascript"
-src="http://www.google.com/coop/cse/brand?form=searchbox_007525575524326405779%3
-Ac0gv0y410u0"></script>
-<!-- Google CSE Search Box Ends -->
-	</div>
+<p>Brought to you by the <a href="http://www.planetplanet.org/">Planet</a> aggregator, cron, <a href="http://www.python.org/">Python</a>, <a href="http://www.redhat.com/">Red Hat</a> (who kindly host the GNOME servers). Design by <a href="http://bethesignal.org/">Jeff Waugh</a>, inspired by earlier work from <a href="http://www.actsofvolition.com/">Steven Garrity</a>, <a href="http://www.gnome.org/~seth/">Seth Nickell</a> and <a href="http://www.isity.net/">Diana Fong</a>.</p>
 
-	<div class="section">
-	<h3>GNOME World Wide</h3>
-	<p class="center"><a href="http://live.gnome.org/GnomeWorldWide"><img src="http://www.gnome.org/~jdub/random/GnomeWorldWideSmall.jpg" alt=""></a></p>
-	<p>GNOME communities around the world by region and language:</p>
-	<ul>
-		<li><a href="http://www.gnomebangalore.org/?q=blog">Bangalore, India</a></li>
-		<li><a href="http://br.gnome.org/">Brazil</a></li>
-		<li><a href="http://gnome.cult.bg/">Bulgaria</a></li>
-		<li><a href="http://planeta.gnome.cl/">Chile</a></li>
-		<li><a href="http://planet.gnomefr.org/">French</a></li>
-		<li><a href="http://planet.gnome-ev.de/">Germany</a></li>
-		<li><a href="http://planet.gnome.gr/">Greece</a></li>
-		<li><a href="http://planeta.es.gnome.org/">Hispano</a></li>
-		<li><a href="http://it.gnome.org/planet/">Italy</a></li>
-		<li><a href="http://gnome.or.kr/pgk/">Korea</a></li>
-		<li><a href="http://planet.nl.gnome.org/">Netherlands</a></li>
-		<li><a href="http://www.gnome.org.tr/">Turkey</a></li>
-		<li><a href="http://www.uk.gnome.org/planet/">United Kingdom</a></li>
-	</ul>
-	</div>
+<p>Planet GNOME is edited by Jeff Waugh. Please <a href="mailto:jdub@gnome.org?Subject=planet.gnome.org">mail him</a> if you have a question or would like your blog added to the feed.</p>
 
-	<div class="section">
-	<h3>Subscribe</h3>
-	<ul>
-		<li><a href="atom.xml">Atom 1.0</a></li>
-		<li><a href="rss20.xml">RSS 2.0</a></li>
-		<li><a href="rss10.xml">RSS 1.0</a></li>
-		<li><a href="foafroll.xml">FOAF</a></li>
-		<li><a href="opml.xml">OPML</a></li>
-	</ul>
-	</div>
-
-	<div class="section">
-	<h3>Feeds</h3>
-	<ul>
-	<TMPL_LOOP Channels>
-	<li><TMPL_IF url>
-	<a href="<TMPL_VAR url ESCAPE="HTML">" title="Subscribe"><img src="http://planet.gnome.org/img/feed-icon-10x10.png" alt="(feed)"></a>
-	<TMPL_ELSE>
-	<img src="http://planet.gnome.org/img/feed-icon-10x10.png" alt="(feed)">
-	</TMPL_IF>
-	<TMPL_IF link>
-	<a href="<TMPL_VAR link ESCAPE="HTML">" <TMPL_IF message>class="message" title="<TMPL_VAR message ESCAPE="HTML">"</TMPL_IF><TMPL_UNLESS message>title="<TMPL_VAR title_plain ESCAPE="HTML">"</TMPL_UNLESS>><TMPL_VAR name></a>
-	<TMPL_ELSE>
-	<span <TMPL_IF message>class="message" title="<TMPL_VAR message ESCAPE="HTML">"</TMPL_IF><TMPL_UNLESS message>title="<TMPL_VAR title_plain ESCAPE="HTML">"</TMPL_UNLESS>><TMPL_VAR name></span>
-	</TMPL_IF>
-	</li>
-	</TMPL_LOOP>
-	</ul>
-	</div>
-
-	<div class="section">
-	<h3>Colophon</h3>
-	<p>Brought to you by the <a href="http://www.planetplanet.org/">Planet</a> aggregator, cron, <a href="http://www.python.org/">Python</a>, <a href="http://www.redhat.com/">Red Hat</a> (who kindly host the GNOME servers). Beautiful template design by <a href="http://www.actsofvolition.com/">Steven Garrity</a>, concept by <a href="http://www.gnome.org/~seth/">Seth Nickell</a> and <a href="http://www.isity.net/">Diana Fong</a>.</p>
-	<p>Planet GNOME is edited by <a href="mailto:jdub@gnome.org?Subject=planet.gnome.org">Jeff Waugh</a>. Please mail him if you have a question or would like your blog added to the feed.</p>
-	</div>
+<p>Updated on November 22, 2007 03:38 PM UTC. Entries are normalised to UTC time.</p>
+</div>
 </div>
 
-
-<div id="copyright">
-Copyright &copy; 2003-2007, <a href="http://www.gnome.org/">The GNOME Project</a><br />
-Blog entries aggregated on this page are owned by, and represent the opinion of the author.<br />
-<a href="http://validator.w3.org/check/referer">Optimised</a> for <a href="http://www.w3.org/">standards</a>. Hosted by <a href="http://redhat.com/">Red Hat</a>.<br />
+<div class="column">
+<div class="section">
+<h3>GNOME World Wide</h3>
+<p><a href="http://live.gnome.org/GnomeWorldWide"><img src="http://www.gnome.org/~jdub/random/GnomeWorldWideSmall.jpg" alt=""></a></p>
+<p>GNOME communities around the world by region and language:</p>
+<ul>
+  <li><a href="http://www.gnomebangalore.org/?q=blog">Bangalore, India</a></li>
+  <li><a href="http://br.gnome.org/">Brazil</a></li>
+  <li><a href="http://gnome.cult.bg/">Bulgaria</a></li>
+  <li><a href="http://planeta.gnome.cl/">Chile</a></li>
+  <li><a href="http://planet.gnomefr.org/">Francophile</a></li>
+  <li><a href="http://planet.gnome-ev.de/">Germany</a></li>
+  <li><a href="http://planet.gnome.gr/">Greece</a></li>
+  <li><a href="http://planeta.es.gnome.org/">Hispano</a></li>
+  <li><a href="http://it.gnome.org/planet/">Italy</a></li>
+  <li><a href="http://gnome.or.kr/pgk/">Korea</a></li>
+  <li><a href="http://planet.nl.gnome.org/">Netherlands</a></li>
+  <li><a href="http://www.gnome.org.tr/">Turkey</a></li>
+  <li><a href="http://www.uk.gnome.org/planet/">United Kingdom</a></li>
+</ul>
 </div>
+</div>
+
+<div id="fineprint" class="section">
+<h3><img src="img/footer-logo.png" alt="GNOME" title="GNOME"></h3>
+<p>Copyright © 2003-2008, <a href="http://www.gnome.org/">The GNOME Project</a>.<br>
+<a href="http://validator.w3.org/check/referer">Optimised</a> for <a href="http://www.w3.org/">standards</a>.<br>
+Hosted by <a href="http://www.redhat.com/">Red Hat</a>.</p>
+<p id="ownership">Blog entries aggregated on this page are owned by, and represent the opinion of the author.</p>
+</div> <!-- /fineprint -->
+
+</div> <!-- /footer -->
+
+
+</div> <!-- /page -->
 
 
 </body>
