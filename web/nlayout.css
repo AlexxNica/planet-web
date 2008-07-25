@@ -238,25 +238,27 @@ div.breadcrumb {
 	margin: 0px;
 	padding: 0px;
 	list-style-type: none;
+	font-size: 90%;
+}
+#feedlist ul li * {
+	vertical-align: middle;
+}
+#feedlist ul li input {
+	margin: 0.2em;
 }
 #feedlist ul li a {
 	color: #000;
 	text-decoration: none;
-	font-size: 90%;
-}
-#feedlist ul li a.message {
-	color: #999;
 }
 #feedlist ul li a:hover {
 	text-decoration: underline;
 }
-#feedlist ul li a img {
-	margin-right: 0.2em;
-	border: 0px;
-	clear: below;
+#feedlist ul li a.message {
+	color: #999;
 }
-#feedlist ul li input {
-	margin-right: 0.2em;
+#feedlist ul li a img {
+	margin: 0px 0.2em;
+	border: 0px;
 }
 
 #footer {
