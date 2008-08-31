@@ -1,0 +1,74 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title><TMPL_VAR name></title>
+	<link rel="stylesheet" href="http://planet.gnome.org/generic.css" type="text/css">
+	<link rel="stylesheet" href="http://planet.gnome.org/planet.css" type="text/css">
+
+	<link rel="icon" type="image/png" href="http://planet.gnome.org/img/gnome-16.png">
+	<link rel="SHORTCUT ICON" type="image/png" href="http://planet.gnome.org/img/gnome-16.png">
+	<link rel="alternate" type="application/atom+xml" title="Planet GNOME Atom 1.0" href="http://planet.gnome.org/atom.xml">
+	<link rel="alternate" type="application/rss+xml" title="Planet GNOME RSS 2.0" href="http://planet.gnome.org/rss20.xml">
+</head>
+
+
+<body>
+
+
+<TMPL_LOOP Items>
+	<TMPL_IF new_date>
+		<h2 class="date"><TMPL_VAR new_date></h2>
+	</TMPL_IF>
+
+	<div class="entry<TMPL_IF channel_nick> <TMPL_VAR channel_nick></TMPL_IF>">
+	
+	<div class="person-info">
+		<a href="<TMPL_VAR channel_link ESCAPE="HTML">" title="<TMPL_VAR channel_title ESCAPE="HTML">">
+			<TMPL_IF channel_face>
+				<img class="face" src="<TMPL_VAR channel_face ESCAPE="HTML">" alt=""><br />
+			<TMPL_ELSE>
+				<img class="face" src="http://planet.gnome.org/heads/nobody.png" alt=""><br />
+			</TMPL_IF>
+			<TMPL_VAR channel_name>
+			<TMPL_IF channel_real><br /><TMPL_VAR channel_real></TMPL_IF>
+			<TMPL_IF channel_nick><br />(<TMPL_VAR channel_nick>)</TMPL_IF>
+		</a>
+		<TMPL_IF channel_gsoc2008>
+		<p><a href="http://www.gnome.org/projects/soc/" title="Google Summer of Code 2008"><img src="http://planet.gnome.org/heads/logos/gsoc2008.png" alt="GSoC 2007" /></a></p>
+		</TMPL_IF>
+	</div>
+	
+		<div class="post">
+			<div class="post-header">
+				<TMPL_IF title>
+				<h3 class="post-title"><a href="<TMPL_VAR link ESCAPE="HTML">"><TMPL_VAR title></a></h3>
+				</TMPL_IF>
+			</div>
+			<div class="post-contents">
+			<TMPL_VAR content>
+			</div>
+			<div class="post-footer">
+				<p><a href="<TMPL_VAR link ESCAPE="HTML">"><TMPL_VAR date></a></p>
+			</div>
+			<b class="vt lt"></b><b class="vt rt"></b><b class="hz to"></b><b class="hz bo"></b>
+			<b class="cr tl"></b><b class="cr tr"></b><b class="cr bl"></b><b class="cr br"></b>
+		</div>
+
+	</div>
+</TMPL_LOOP>
+</div>
+
+
+<div id="copyright">
+Copyright &copy; 2003-2007, <a href="http://www.gnome.org/">The GNOME Project</a><br />
+Blog entries aggregated on this page are owned by, and represent the opinion of the author.<br />
+<a href="http://validator.w3.org/check/referer">Optimised</a> for <a href="http://www.w3.org/">standards</a>. Hosted by <a href="http://redhat.com/">Red Hat</a>.<br />
+</div>
+
+
+</body>
+
+</html>
