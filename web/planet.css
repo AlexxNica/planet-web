@@ -87,6 +87,7 @@ b.bo { bottom: 0px; left: 0px; background-position: bottom left; }
 
 .post-contents {
 	position: relative;
+	overflow: auto;
 	z-index: 1;
 	line-height: 140%;
 }
@@ -130,6 +131,17 @@ b.bo { bottom: 0px; left: 0px; background-position: bottom left; }
 
 .post-contents .delicious-tags {
 	text-align: right;
+	font-size: x-small;
+}
+
+.post-contents .wp-caption {
+	width: auto !important;
+}
+.post-contents .wp-caption .wp-caption-text {
+	margin: 0;
+	border-bottom: 1px solid #ccc;
+	background-color: #eee;
+	text-align: center;
 	font-size: x-small;
 }
 
