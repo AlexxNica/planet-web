@@ -19,7 +19,7 @@ else
 fi
 
 pushd config/$CONFIG > /dev/null
-$PLANET $@ config.ini
+nice $PLANET $@ config.ini
 popd > /dev/null
 
 rm -f lock.$CONFIG
