@@ -124,10 +124,8 @@
 <TMPL_IF title><h3 class="post-title"><a href="<TMPL_VAR link ESCAPE="HTML">"><TMPL_VAR title></a></h3></TMPL_IF>
 </div> <!-- /post-header -->
 
-<div class="post-contents">
-<TMPL_IF channel_fixedwidth><pre></TMPL_IF>
+<div class="post-contents <TMPL_IF channel_fixedwidth>post-fixedwidth</TMPL_IF>">
 <TMPL_VAR content>
-<TMPL_IF channel_fixedwidth></pre></TMPL_IF>
 </div> <!-- /post-contents -->
 
 <div class="post-footer">
