@@ -114,6 +114,10 @@ b.bo { bottom: 0px; left: 0px; background-position: bottom left; }
 	border-left: 5px solid #ddd;
 }
 
+.post-fixedwidth {
+	white-space: pre;
+}
+
 .post-contents pre {
 	overflow: auto;
 }
