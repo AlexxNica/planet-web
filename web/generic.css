@@ -9,16 +9,14 @@ pre {
 
 /* Anchors */
 a {
-	color: #0000ff;
+	color: #3465a4;
+	text-decoration: none;
 }
 
-a:visited {
-	color: #551a8b;
+a:hover {
+	text-decoration: underline;
 }
 
-a:active {
-	color: #ff0000;
-}
 
 /* Basic classes */
 
