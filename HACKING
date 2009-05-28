@@ -1,21 +1,11 @@
 Please don't commit to this module without permission from the Planet GNOME
-editor [1], Jeff Waugh <jdub@gnome.org>.
+editors (currently Lucas Rocha, Vincent Untz, Jeff Waugh). Strong editorial
+policies have kept Planet GNOME relevant and readable, so even though it seems
+pretty fascist, it ends up being pretty good.
+
+See http://live.gnome.org/PlanetGnome for more details.
 
 Please don't run update-* manually, they are executed by the update script
 and cron, to automagically do the right thing.
 
 Thanks!
-
-- Jeff Waugh
-
-
-[1] Strong editorial policies have kept Planet GNOME relevant and readable,
-so even though it seems pretty fascist, it ends up being pretty good. The
-big problem has been editorial unresponsiveness, particularly when Jeff has
-been travelling or otherwise lumped with crazy email load. Let Jeff know if
-you have any questions or suggestions about Planet GNOME.
-
-A previous set of suggestions as to what the policy might be was raised on
-my blog ages ago: http://perkypants.org/blog/2005/06/10/1118362980/ -- The
-objective of writing up the existing guidelines and setting up an editorial
-team has been adopted, but is not in place just yet.
