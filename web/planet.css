@@ -97,7 +97,8 @@ b.bo { bottom: 0px; left: 0px; background-position: bottom left; }
 	font-weight: bold;
 }
 
-.post-contents img {
+.post-contents img,
+.post-contents video {
 	width: auto;
 	max-width: 100%;
 	height: auto;
