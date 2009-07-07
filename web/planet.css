@@ -139,22 +139,57 @@ b.bo { bottom: 0px; left: 0px; background-position: bottom left; }
 	font-size: x-small;
 }
 
-.post-contents .wp-caption {
-	width: auto !important;
-}
-.post-contents .wp-caption .wp-caption-text {
-	margin: 0;
-	border-bottom: 1px solid #ccc;
-	background-color: #eee;
-	text-align: center;
-	font-size: x-small;
-}
-
 .post-contents:after {
 	content: "";
 	display: block;
 	clear: both;
 }
+
+/* Often-used WordPress styles */
+.alignleft {
+	float:left;
+	margin-right:1em;
+	margin-bottom:1em;
+}
+.alignright {
+	float:right;
+	margin-left:1em;
+	margin-bottom:1em;
+}
+.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.wp-smiley {
+	vertical-align: middle;
+}
+
+.wp-caption {
+	border: 1px solid #ddd;
+	text-align: center;
+	background-color: #f3f3f3;
+	padding-top: 4px;
+	margin: 10px;
+	/* optional rounded corners for browsers that support it */
+	-moz-border-radius: 3px;
+	-khtml-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+}
+.wp-caption img {
+	margin: 0;
+	padding: 0;
+	border: 0 none;
+}
+.wp-caption p.wp-caption-text {
+	font-size: 11px;
+	line-height: 17px;
+	padding: 0 4px 5px;
+	margin: 0;
+}
+/* Often-used WordPress styles */
 
 .post-footer {
 	margin-top: 1em;
