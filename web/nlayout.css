@@ -315,3 +315,8 @@ div.breadcrumb {
 	margin-top: 2em;
 	font-size: 90%;
 }
+
+/* Friends of GNOME ruler */
+#gnome-fog-ruler {
+	margin-bottom: 2em;
+}
