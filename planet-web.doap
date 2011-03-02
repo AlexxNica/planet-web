@@ -20,6 +20,13 @@
   </maintainer>
   <maintainer>
     <foaf:Person>
+      <foaf:name>Alberto Ruiz</foaf:name>
+      <foaf:mbox rdf:resource="mailto:aruiz@gnome.org" />
+      <gnome:userid>aruiz</gnome:userid>
+    </foaf:Person>
+  </maintainer>
+  <maintainer>
+    <foaf:Person>
       <foaf:name>Vincent Untz</foaf:name>
       <foaf:mbox rdf:resource="mailto:vuntz@gnome.org" />
       <gnome:userid>vuntz</gnome:userid>
