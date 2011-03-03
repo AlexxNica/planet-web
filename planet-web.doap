@@ -13,13 +13,6 @@
 
   <maintainer>
     <foaf:Person>
-      <foaf:name>Lucas Rocha</foaf:name>
-      <foaf:mbox rdf:resource="mailto:lucasr@gnome.org" />
-      <gnome:userid>lucasr</gnome:userid>
-    </foaf:Person>
-  </maintainer>
-  <maintainer>
-    <foaf:Person>
       <foaf:name>Alberto Ruiz</foaf:name>
       <foaf:mbox rdf:resource="mailto:aruiz@gnome.org" />
       <gnome:userid>aruiz</gnome:userid>
