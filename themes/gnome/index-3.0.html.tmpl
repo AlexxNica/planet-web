@@ -23,77 +23,47 @@
 
 <div id="page">
 
+	<script type="text/javascript" src="http://www.gnome.org/friends/ruler/ruler.js"></script>
 
-<div id="header">
+	<div id="content">
 
-<!-- Google CSE Search Box Begins -->
-<div id="search">
-<form id="searchbox_007525575524326405779:c0gv0y410u0" action="http://www.google.com/cse">
-<input type="hidden" name="cx" value="007525575524326405779:c0gv0y410u0">
-<input name="q" type="text" size="15">
-<!--<input type="submit" name="sa" value="Search">-->
-<input type="hidden" name="cof" value="FORID:0">
-</form>
-<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=searchbox_007525575524326405779%3Ac0gv0y410u0"></script>
-</div> <!-- /search -->
-<!-- Google CSE Search Box Ends -->
+	<TMPL_IF banner_message>
+	<div class="banner"><TMPL_VAR banner_message></div>
+	</TMPL_IF>
 
-<div id="masthead">
-<a href="/" title="Home" rel="home"><img src="http://planet.gnome.org/img/logo.png" alt="Home" id="site-logo" width="64" height="64"></a>
-<div id="site-title">
-<p id="site-name"><a href="/" title="Home" rel="home"><TMPL_VAR title ESCAPE="HTML"></a></p>
-<p id="site-slogan">24 hours a day, 7 days a week, 365 days per year<span title="Yeah, yeah... 366 days per leap year :-)" style="cursor: pointer;">*</span>, this is... <TMPL_VAR title ESCAPE="HTML">!</p>
-</div> <!-- /site-title -->
-<a id="footer-link" href="#footer">About <TMPL_VAR title ESCAPE="HTML"></a>
-</div> <!-- /masthead -->
+	<TMPL_LOOP Items>
 
-</div> <!-- /header -->
+		<TMPL_IF new_date>
+			<h2 class="date"><TMPL_VAR new_date></h2>
+		</TMPL_IF>
 
-<script type="text/javascript" src="http://www.gnome.org/friends/ruler/ruler.js"></script>
+		<div class="entry<TMPL_IF channel_nick> <TMPL_VAR channel_nick></TMPL_IF>">
+			<div class="person-info">
+				<a href="<TMPL_VAR channel_link ESCAPE="HTML">" title="<TMPL_VAR channel_title ESCAPE="HTML">"><TMPL_IF channel_face><img class="face" src="<TMPL_VAR channel_face ESCAPE="HTML">" alt=""><br><TMPL_ELSE><img class="face" src="http://planet.gnome.org/heads/nobody.png" alt=""><br></TMPL_IF><TMPL_VAR channel_name><TMPL_IF channel_real><br><TMPL_VAR channel_real></TMPL_IF><TMPL_IF channel_nick><br>(<TMPL_VAR channel_nick>)</TMPL_IF></a>
+				<TMPL_IF channel_opw2010><p><a href="http://live.gnome.org/GnomeWomen/OutreachProgram2010" title="GNOME Outreach Program for Women 2010"><img src="http://planet.gnome.org/heads/logos/opw2010.png" alt="OPW 2010" /></a></p></TMPL_IF>
+				<TMPL_IF channel_gsoc2010><p><a href="http://live.gnome.org/SummerOfCode2010" title="Google Summer of Code 2010"><img src="http://planet.gnome.org/heads/logos/gsoc2010.png" alt="GSoC 2010" /></a></p></TMPL_IF>
+				<TMPL_IF channel_guadec><p><a href="http://www.guadec.org/" title="The GNOME Conference"><img src="http://planet.gnome.org/heads/logos/guadec.png" alt="The GNOME Conference" /></a></p></TMPL_IF>
+			</div>
 
-<div id="content">
+			<div class="post">
+				<div class="post-header">
+					<TMPL_IF title><h3 class="post-title"><a href="<TMPL_VAR link ESCAPE="HTML">"><TMPL_VAR title></a></h3></TMPL_IF>
+				</div> <!-- /post-header -->
 
-<TMPL_IF banner_message>
-<div class="banner"><TMPL_VAR banner_message></div>
-</TMPL_IF>
+				<div class="post-contents <TMPL_IF channel_fixedwidth>post-fixedwidth</TMPL_IF>">
+					<TMPL_VAR content>
+				</div> <!-- /post-contents -->
 
-<TMPL_LOOP Items>
+				<div class="post-footer">
+					<p><a href="<TMPL_VAR link ESCAPE="HTML">"><TMPL_VAR date></a></p>
+				</div> <!-- /post-footer -->
 
-<TMPL_IF new_date>
-<h2 class="date"><TMPL_VAR new_date></h2>
-</TMPL_IF>
+				<b class="vt lt"></b><b class="vt rt"></b><b class="hz to"></b><b class="hz bo"></b>
+				<b class="cr tl"></b><b class="cr tr"></b><b class="cr bl"></b><b class="cr br"></b>
+			</div> <!-- /post -->
+	</div> <!-- /entry -->
 
-<div class="entry<TMPL_IF channel_nick> <TMPL_VAR channel_nick></TMPL_IF>">
-
-<div class="person-info">
-<a href="<TMPL_VAR channel_link ESCAPE="HTML">" title="<TMPL_VAR channel_title ESCAPE="HTML">"><TMPL_IF channel_face><img class="face" src="<TMPL_VAR channel_face ESCAPE="HTML">" alt=""><br><TMPL_ELSE><img class="face" src="http://planet.gnome.org/heads/nobody.png" alt=""><br></TMPL_IF><TMPL_VAR channel_name><TMPL_IF channel_real><br><TMPL_VAR channel_real></TMPL_IF><TMPL_IF channel_nick><br>(<TMPL_VAR channel_nick>)</TMPL_IF></a>
-<TMPL_IF channel_opw2010><p><a href="http://live.gnome.org/GnomeWomen/OutreachProgram2010" title="GNOME Outreach Program for Women 2010"><img src="http://planet.gnome.org/heads/logos/opw2010.png" alt="OPW 2010" /></a></p></TMPL_IF>
-<TMPL_IF channel_gsoc2010><p><a href="http://live.gnome.org/SummerOfCode2010" title="Google Summer of Code 2010"><img src="http://planet.gnome.org/heads/logos/gsoc2010.png" alt="GSoC 2010" /></a></p></TMPL_IF>
-<TMPL_IF channel_guadec><p><a href="http://www.guadec.org/" title="The GNOME Conference"><img src="http://planet.gnome.org/heads/logos/guadec.png" alt="The GNOME Conference" /></a></p></TMPL_IF>
-</div>
-
-<div class="post">
-
-<div class="post-header">
-<TMPL_IF title><h3 class="post-title"><a href="<TMPL_VAR link ESCAPE="HTML">"><TMPL_VAR title></a></h3></TMPL_IF>
-</div> <!-- /post-header -->
-
-<div class="post-contents <TMPL_IF channel_fixedwidth>post-fixedwidth</TMPL_IF>">
-<TMPL_VAR content>
-</div> <!-- /post-contents -->
-
-<div class="post-footer">
-<p><a href="<TMPL_VAR link ESCAPE="HTML">"><TMPL_VAR date></a></p>
-</div> <!-- /post-footer -->
-
-<b class="vt lt"></b><b class="vt rt"></b><b class="hz to"></b><b class="hz bo"></b>
-<b class="cr tl"></b><b class="cr tr"></b><b class="cr bl"></b><b class="cr br"></b>
-
-</div> <!-- /post -->
-
-</div> <!-- /entry -->
-
-</TMPL_LOOP>
+	</TMPL_LOOP>
 
 </div> <!-- /content -->
 
