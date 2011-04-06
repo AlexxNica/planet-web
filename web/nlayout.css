@@ -231,8 +231,10 @@ div.breadcrumb {
 	column-gap: 1em;
 	-moz-column-count: 4;
 	-moz-column-gap: 1em;
+	-webkit-border-radius: 1em;
 	-webkit-column-count: 4;
 	-webkit-column-gap: 1em;
+	border-radius: 1em 1em 1em 1em;
 }
 #feedlist ul {
 	margin: 0px;
