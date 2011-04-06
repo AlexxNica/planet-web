@@ -8,24 +8,15 @@
 	<link rel="shortcut icon" type="image/png" href="http://planet.gnome.org/img/gnome-16.png">
 	<!--link rel="alternate" type="application/atom+xml" title="<TMPL_VAR title ESCAPE="HTML"> Atom 1.0" href="<TMPL_VAR link ESCAPE="HTML">atom.xml">
 	<link rel="alternate" type="application/rss+xml" title="<TMPL_VAR title ESCAPE="HTML"> RSS 2.0" href="<TMPL_VAR link ESCAPE="HTML">rss20.xml"-->
-
+	<link href='http://fonts.googleapis.com/css?family=Cantarell' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+	
 	<link rel="stylesheet" href="http://planet.gnome.org/nlayout.css" type="text/css">
 	<link rel="stylesheet" href="http://planet.gnome.org/planet.css" type="text/css">
 	<link rel="stylesheet" href="http://planet.gnome.org/generic.css" type="text/css">
 	<link rel="stylesheet" href="http://blogs.gnome.org/wp-content/mu-plugins/bug-links/bug-links.css" type="text/css">
 
 	<style rel="stylesheet" type="text/css">
-	@font-face {
-    font-family: "Cantarell";
-    src: local("Cantarell"), local("Cantarell Regular"), url("../fonts/Cantarell-Regular.otf");
-	}
-	
-	@font-face {
-    font-family: "Cantarell";
-    font-weight: bold;
-    src: local("Cantarell"), local("Cantarell Bold"), local("Cantarell-Bold"), url("../fonts/Cantarell-Bold.otf");
-	}
-	
 	#global_domain_bar
 	{
     background: none repeat scroll 0 0 #FFFFFF;
@@ -118,7 +109,7 @@
     margin-right: auto;
     clear: left;
     margin-top: 0;
-    max-width: 65em;
+    width: 65em;
     padding: 0 1em;
 	}
 	
@@ -126,12 +117,14 @@
 	#planet-subtitle
 	{
 		color: #555753;
+		font-size: 100%;
 		font-weight: bold;
 	}
 	
 	#planet-logo
 	{
-		vertical-align: text-top;
+		vertical-align: middle;
+		padding-bottom: 25px;
 	}
 	
 	.post
