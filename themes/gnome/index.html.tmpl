@@ -6,13 +6,140 @@
 
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<link rel="shortcut icon" type="image/png" href="http://planet.gnome.org/img/gnome-16.png">
-	<link rel="alternate" type="application/atom+xml" title="<TMPL_VAR title ESCAPE="HTML"> Atom 1.0" href="<TMPL_VAR link ESCAPE="HTML">atom.xml">
-	<link rel="alternate" type="application/rss+xml" title="<TMPL_VAR title ESCAPE="HTML"> RSS 2.0" href="<TMPL_VAR link ESCAPE="HTML">rss20.xml">
-
+	<!--link rel="alternate" type="application/atom+xml" title="<TMPL_VAR title ESCAPE="HTML"> Atom 1.0" href="<TMPL_VAR link ESCAPE="HTML">atom.xml">
+	<link rel="alternate" type="application/rss+xml" title="<TMPL_VAR title ESCAPE="HTML"> RSS 2.0" href="<TMPL_VAR link ESCAPE="HTML">rss20.xml"-->
+	<link href='http://fonts.googleapis.com/css?family=Cantarell' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+	
 	<link rel="stylesheet" href="http://planet.gnome.org/nlayout.css" type="text/css">
 	<link rel="stylesheet" href="http://planet.gnome.org/planet.css" type="text/css">
 	<link rel="stylesheet" href="http://planet.gnome.org/generic.css" type="text/css">
 	<link rel="stylesheet" href="http://blogs.gnome.org/wp-content/mu-plugins/bug-links/bug-links.css" type="text/css">
+
+	<style rel="stylesheet" type="text/css">
+	#global_domain_bar
+	{
+    background: none repeat scroll 0 0 #FFFFFF;
+    height: 10px;
+    border: 0 none;
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+    color: #2E3436;
+    font-family: Cantarell,'Droid Sans',Ubuntu,'DejaVu Sans',Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.7em;
+	}
+
+	#global_domain_bar a
+	{
+		-moz-border-radius: 5px 5px 5px 5px;
+		-webkit-border-radius: 5px;
+		border-radius: 5px 5px 5px 5px;
+		background: url("http://planet.gnome.org/img/30/favicon.png") no-repeat scroll 8px 7px #FFFFFF;
+		color: #555753;
+		float: right;
+		font-size: 12px;
+		margin-right: 30px;
+		padding: 4px 12px 2px 26px;
+		text-decoration: none;
+		line-height: 1.7em;
+	}
+	
+	#page
+	{
+		background: url("http://planet.gnome.org/img/30/html-bg.png") repeat-x scroll center top #FFFFFF;
+		font-family: Cantarell,'Droid Sans',Ubuntu,'DejaVu Sans',Arial,sans-serif;
+	}
+	
+		
+	a
+	{ 
+		color: #0489B7;
+	}
+	
+	#global_domain_bar div {
+		max-width: 940px;
+		margin: 0 auto;
+	}
+	
+	div.post-contents
+	{
+		background: white;
+	}
+	
+	.post-title a
+	{
+		color: #0489B7;
+		font-weight: bold;
+	}
+	
+	#footer, #feeds
+	{
+    background: none repeat scroll 0 0 #D3D7CF;
+    color: #555753;
+	}
+	
+	#footer a
+	{
+    color: inherit;
+	}
+	
+	#footer-grass
+	{
+    background: url("http://planet.gnome.org/img/30/grass.png") repeat-x scroll center top transparent;
+    height: 39px;
+    margin-top: -33px;
+	}
+	
+	#footer-art
+	{
+		margin-left: auto;
+		margin-right: auto;
+		clear: left;
+		height: 180px;
+		margin-top: 0;
+		width: 940px;
+		background-image: url("http://planet.gnome.org/img/30/default.png");
+	}
+	
+	#planet-banner
+	{
+    margin-left: auto;
+    margin-right: auto;
+    clear: left;
+    margin-top: 0;
+    width: 65em;
+    padding: 0 1em;
+	}
+	
+	
+	#planet-subtitle
+	{
+		color: #555753;
+		font-size: 100%;
+		font-weight: bold;
+		margin: 0;
+		padding 0;
+		padding-top: 14px;
+	}
+	
+	#planet-logo
+	{
+		vertical-align: middle;
+		padding-bottom: 25px;
+		margin-left:    26px;
+		padding-right:  50px;
+	}
+	
+	.post
+	{
+		color: #555753;
+		line-height: 1.6;
+	}
+	</style>
+
 
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>
 	<script type="text/javascript" src="http://planet.gnome.org/jquery.lazyload.min.js"></script>
@@ -21,88 +148,69 @@
 
 <body>
 
-
-<div id="gnome-sites">
-<ul><li class="home"><a href="http://www.gnome.org/" title="Home">Home</a></li><li><a href="http://news.gnome.org" title="News">News</a></li><li><a href="http://www.gnome.org/projects/" title="Projects">Projects</a></li><li><a href="http://art.gnome.org" title="Art">Art</a></li><li><a href="http://www.gnome.org/support/" title="Support">Support</a></li><li><a href="http://developer.gnome.org" title="Development">Development</a></li><li><a href="http://www.gnome.org/community/" title="Community">Community</a></li></ul>
-</div> <!-- /gnome-sites -->
-
-
 <div id="page">
 
 
-<div id="header">
+	<div id="global_domain_bar">
+		<div>
+			<a href="#"><strong>GNOME</strong>.ORG</a>
+		</div>
+  </div>
 
-<!-- Google CSE Search Box Begins -->
-<div id="search">
-<form id="searchbox_007525575524326405779:c0gv0y410u0" action="http://www.google.com/cse">
-<input type="hidden" name="cx" value="007525575524326405779:c0gv0y410u0">
-<input name="q" type="text" size="15">
-<!--<input type="submit" name="sa" value="Search">-->
-<input type="hidden" name="cof" value="FORID:0">
-</form>
-<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=searchbox_007525575524326405779%3Ac0gv0y410u0"></script>
-</div> <!-- /search -->
-<!-- Google CSE Search Box Ends -->
+	<div id="planet-banner">
+		<p id="planet-subtitle">
+			<img id="planet-logo" src="http://planet.gnome.org/img/30/planet-logo.png"  alt="Planet GNOME" title="Planet GNOME"/>
+			24 hours a day, 7 days a week, 365 days per year...
+		</p>
+	</div>
 
-<div id="masthead">
-<a href="/" title="Home" rel="home"><img src="http://planet.gnome.org/img/logo.png" alt="Home" id="site-logo" width="64" height="64"></a>
-<div id="site-title">
-<p id="site-name"><a href="/" title="Home" rel="home"><TMPL_VAR title ESCAPE="HTML"></a></p>
-<p id="site-slogan">24 hours a day, 7 days a week, 365 days per year<span title="Yeah, yeah... 366 days per leap year :-)" style="cursor: pointer;">*</span>, this is... <TMPL_VAR title ESCAPE="HTML">!</p>
-</div> <!-- /site-title -->
-<a id="footer-link" href="#footer">About <TMPL_VAR title ESCAPE="HTML"></a>
-</div> <!-- /masthead -->
+  <!-- Fog ruler -->
+	<!--script type="text/javascript" src="http://www.gnome.org/friends/ruler/ruler.js"></script-->
 
-</div> <!-- /header -->
+	<div id="content">
 
-<script type="text/javascript" src="http://www.gnome.org/friends/ruler/ruler.js"></script>
+	<TMPL_IF banner_message>
+	<div class="banner"><TMPL_VAR banner_message></div>
+	</TMPL_IF>
 
-<div id="content">
+	<TMPL_LOOP Items>
 
-<TMPL_IF banner_message>
-<div class="banner"><TMPL_VAR banner_message></div>
-</TMPL_IF>
+		<TMPL_IF new_date>
+			<h2 class="date"><TMPL_VAR new_date></h2>
+		</TMPL_IF>
 
-<TMPL_LOOP Items>
+		<div class="entry<TMPL_IF channel_nick> <TMPL_VAR channel_nick></TMPL_IF>">
+			<div class="person-info">
+				<a href="<TMPL_VAR channel_link ESCAPE="HTML">" title="<TMPL_VAR channel_title ESCAPE="HTML">"><TMPL_IF channel_face><img class="face" src="<TMPL_VAR channel_face ESCAPE="HTML">" alt=""><br><TMPL_ELSE><img class="face" src="http://planet.gnome.org/heads/nobody.png" alt=""><br></TMPL_IF><TMPL_VAR channel_name><TMPL_IF channel_real><br><TMPL_VAR channel_real></TMPL_IF><TMPL_IF channel_nick><br>(<TMPL_VAR channel_nick>)</TMPL_IF></a>
+				<TMPL_IF channel_opw2010><p><a href="http://live.gnome.org/GnomeWomen/OutreachProgram2010" title="GNOME Outreach Program for Women 2010"><img src="http://planet.gnome.org/heads/logos/opw2010.png" alt="OPW 2010" /></a></p></TMPL_IF>
+				<TMPL_IF channel_gsoc2010><p><a href="http://live.gnome.org/SummerOfCode2010" title="Google Summer of Code 2010"><img src="http://planet.gnome.org/heads/logos/gsoc2010.png" alt="GSoC 2010" /></a></p></TMPL_IF>
+				<TMPL_IF channel_guadec><p><a href="http://www.guadec.org/" title="The GNOME Conference"><img src="http://planet.gnome.org/heads/logos/guadec.png" alt="The GNOME Conference" /></a></p></TMPL_IF>
+			</div>
 
-<TMPL_IF new_date>
-<h2 class="date"><TMPL_VAR new_date></h2>
-</TMPL_IF>
+			<div class="post">
+				<div class="post-header">
+					<TMPL_IF title><h3 class="post-title"><a href="<TMPL_VAR link ESCAPE="HTML">"><TMPL_VAR title></a></h3></TMPL_IF>
+				</div> <!-- /post-header -->
 
-<div class="entry<TMPL_IF channel_nick> <TMPL_VAR channel_nick></TMPL_IF>">
+				<div class="post-contents <TMPL_IF channel_fixedwidth>post-fixedwidth</TMPL_IF>">
+					<TMPL_VAR content>
+				</div> <!-- /post-contents -->
 
-<div class="person-info">
-<a href="<TMPL_VAR channel_link ESCAPE="HTML">" title="<TMPL_VAR channel_title ESCAPE="HTML">"><TMPL_IF channel_face><img class="face" src="<TMPL_VAR channel_face ESCAPE="HTML">" alt=""><br><TMPL_ELSE><img class="face" src="http://planet.gnome.org/heads/nobody.png" alt=""><br></TMPL_IF><TMPL_VAR channel_name><TMPL_IF channel_real><br><TMPL_VAR channel_real></TMPL_IF><TMPL_IF channel_nick><br>(<TMPL_VAR channel_nick>)</TMPL_IF></a>
-<TMPL_IF channel_opw2010><p><a href="http://live.gnome.org/GnomeWomen/OutreachProgram2010" title="GNOME Outreach Program for Women 2010"><img src="http://planet.gnome.org/heads/logos/opw2010.png" alt="OPW 2010" /></a></p></TMPL_IF>
-<TMPL_IF channel_gsoc2010><p><a href="http://live.gnome.org/SummerOfCode2010" title="Google Summer of Code 2010"><img src="http://planet.gnome.org/heads/logos/gsoc2010.png" alt="GSoC 2010" /></a></p></TMPL_IF>
-<TMPL_IF channel_guadec><p><a href="http://www.guadec.org/" title="The GNOME Conference"><img src="http://planet.gnome.org/heads/logos/guadec.png" alt="The GNOME Conference" /></a></p></TMPL_IF>
-</div>
+				<div class="post-footer">
+					<p><a href="<TMPL_VAR link ESCAPE="HTML">"><TMPL_VAR date></a></p>
+				</div> <!-- /post-footer -->
 
-<div class="post">
+				<b class="vt lt"></b><b class="vt rt"></b><b class="hz to"></b><b class="hz bo"></b>
+				<b class="cr tl"></b><b class="cr tr"></b><b class="cr bl"></b><b class="cr br"></b>
+			</div> <!-- /post -->
+	</div> <!-- /entry -->
 
-<div class="post-header">
-<TMPL_IF title><h3 class="post-title"><a href="<TMPL_VAR link ESCAPE="HTML">"><TMPL_VAR title></a></h3></TMPL_IF>
-</div> <!-- /post-header -->
-
-<div class="post-contents <TMPL_IF channel_fixedwidth>post-fixedwidth</TMPL_IF>">
-<TMPL_VAR content>
-</div> <!-- /post-contents -->
-
-<div class="post-footer">
-<p><a href="<TMPL_VAR link ESCAPE="HTML">"><TMPL_VAR date></a></p>
-</div> <!-- /post-footer -->
-
-<b class="vt lt"></b><b class="vt rt"></b><b class="hz to"></b><b class="hz bo"></b>
-<b class="cr tl"></b><b class="cr tr"></b><b class="cr bl"></b><b class="cr br"></b>
-
-</div> <!-- /post -->
-
-</div> <!-- /entry -->
-
-</TMPL_LOOP>
+	</TMPL_LOOP>
 
 </div> <!-- /content -->
 
+<div id="footer-art"> &nbsp; </div>
+<div id="footer-grass"> &nbsp; </div>
 
 <div id="feeds">
 	<h3><a href="feeds.html">Feeds</a></h3>
@@ -116,7 +224,7 @@
 <h3><TMPL_VAR title ESCAPE="HTML"></h3>
 <p><b><TMPL_VAR title ESCAPE="HTML"> is a window into the world, work and lives of GNOME <a href="http://planet.gnome.org/heads/">hackers and contributors</a>.</b></p>
 
-<p>Brought to you by the <a href="http://www.planetplanet.org/">Planet</a> aggregator, cron, <a href="http://www.python.org/">Python</a>, <a href="http://www.redhat.com/">Red Hat</a> (who kindly host the GNOME servers). Design by <a href="http://bethesignal.org/">Jeff Waugh</a>, inspired by earlier work from <a href="http://www.actsofvolition.com/">Steven Garrity</a>, <a href="http://www.gnome.org/~seth/">Seth Nickell</a> and <a href="http://www.isity.net/">Diana Fong</a>.</p>
+<p>Brought to you by the <a href="http://www.planetplanet.org/">Planet</a> aggregator, cron, <a href="http://www.python.org/">Python</a>, <a href="http://www.redhat.com/">Red Hat</a> (who kindly host the GNOME servers). Design by <a href="http://vinicius.depizzol.com.br/blog/">Vinicius Depizzol</a> and <a href="http://aruiz.typepad.com">Alberto Ruiz</a>, inspired by earlier work from <a href="http://bethesignal.org/">Jeff Waugh</a>, <a href="http://www.actsofvolition.com/">Steven Garrity</a>, <a href="http://www.gnome.org/~seth/">Seth Nickell</a> and <a href="http://www.isity.net/">Diana Fong</a>.</p>
 
 <p><TMPL_VAR title ESCAPE="HTML"> is edited by Alberto Ruiz, Vincent Untz and Jeff Waugh. Please <a href="mailto:aruiz@gnome.org,vuntz@gnome.org,jdub@gnome.org?Subject=planet.gnome.org">mail them</a> if you have a question. If you would like your blog added to the feed, please <a href="https://bugzilla.gnome.org/enter_bug.cgi?product=website;component=planet.gnome.org">file a bug</a>. Make sure to read the <a href="http://live.gnome.org/PlanetGnome"><TMPL_VAR title ESCAPE="HTML"> guidelines</a> first, as it should cover most questions and as it contains detailed instructions for a blog addition.</p>
 
@@ -148,8 +256,8 @@
 </div>
 
 <div id="fineprint" class="section">
-<h3><img src="img/footer-logo.png" alt="GNOME" title="GNOME"></h3>
-<p>Copyright © 2003-2009, <a href="http://www.gnome.org/">The GNOME Project</a>.<br>
+<h3><img src="http://planet.gnome.org/img/30/gnome-logo.png" alt="GNOME" title="GNOME"></h3>
+<p>Copyright © 2003-2011, <a href="http://www.gnome.org/">The GNOME Project</a>.<br>
 <a href="http://validator.w3.org/check/referer">Optimised</a> for <a href="http://www.w3.org/">standards</a>.<br>
 Hosted by <a href="http://www.redhat.com/">Red Hat</a>.</p>
 <p id="ownership">Planet GNOME automatically reposts blog entries from the GNOME community. Entries on this page are owned by their authors. We do not edit, endorse or vouch for the contents of individual posts.</p>
