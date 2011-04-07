@@ -19,8 +19,8 @@ else
 fi
 
 # Checkout Venus (planetplanet) if we do not have it
-if [ ! -f /var/cache/gnomeweb/venus ]; then
-	pushd /var/cache/gnomeweb
+if [ ! -d /var/cache/gnomeweb/venus ]; then
+	pushd /var/cache/gnomeweb > /dev/null
 	git clone https://github.com/rubys/venus
 	popd > /dev/null
 fi
