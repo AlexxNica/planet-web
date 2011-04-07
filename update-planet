@@ -1,7 +1,7 @@
 #!/bin/sh
 #PLANET=/usr/local/bin/planet/planet.py
 #PLANET=/home/users/jdub/public_html/bzr/planet/devel/trunk/planet.py
-PLANET=/home/users/jdub/bin/venus/planet.py
+PLANET=/var/cache/gnomeweb/venus/planet.py
 
 if [ "$(basename `pwd`)" != "planet-web" ]; then
 	echo "YOU MUST RUN THIS IN planet-web!"
@@ -16,6 +16,13 @@ else
 	CONFIG=$1
 	touch lock.$CONFIG
 	shift
+fi
+
+# Checkout Venus (planetplanet) if we do not have it
+if [ -f /var/cache/gnomeweb/venus ]; then
+	pushd /var/cache/gnomeweb
+	git clone https://github.com/rubys/venus
+	popd > /dev/null
 fi
 
 pushd config/$CONFIG > /dev/null
