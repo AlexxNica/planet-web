@@ -87,7 +87,6 @@ b.bo { bottom: 0px; left: 0px; background-position: bottom left; }
 
 .post-contents {
 	position: relative;
-	overflow: auto;
 	z-index: 1;
 	line-height: 140%;
 }
