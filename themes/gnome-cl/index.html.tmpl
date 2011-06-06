@@ -14,8 +14,137 @@
 	<link rel="stylesheet" href="http://planet.gnome.org/generic.css" type="text/css">
 	<link rel="stylesheet" href="http://blogs.gnome.org/wp-content/mu-plugins/bug-links/bug-links.css" type="text/css">
 
+	<style rel="stylesheet" type="text/css">
+	#global_domain_bar
+	{
+    background: none repeat scroll 0 0 #FFFFFF;
+    height: 10px;
+    border: 0 none;
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+    color: #2E3436;
+    font-family: Cantarell,'Droid Sans',Ubuntu,'DejaVu Sans',Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.7em;
+	}
+
+	#global_domain_bar a
+	{
+		-moz-border-radius: 5px 5px 5px 5px;
+		-webkit-border-radius: 5px;
+		border-radius: 5px 5px 5px 5px;
+		background: url("http://planet.gnome.org/img/30/favicon.png") no-repeat scroll 8px 7px #FFFFFF;
+		color: #555753;
+		float: right;
+		font-size: 12px;
+		margin-right: 30px;
+		padding: 4px 12px 2px 26px;
+		text-decoration: none;
+		line-height: 1.7em;
+	}
+	
+	#page
+	{
+		background: url("http://planet.gnome.org/img/30/html-bg.png") repeat-x scroll center top #FFFFFF;
+		font-family: Cantarell,'Droid Sans',Ubuntu,'DejaVu Sans',Arial,sans-serif;
+	}
+	
+		
+	a
+	{ 
+		color: #0489B7;
+	}
+	
+	#global_domain_bar div {
+		max-width: 940px;
+		margin: 0 auto;
+	}
+	
+	div.post-contents
+	{
+		background: white;
+	}
+	
+	.post-title a
+	{
+		color: #0489B7;
+		font-weight: bold;
+	}
+	
+	#footer, #feeds
+	{
+    background: none repeat scroll 0 0 #D3D7CF;
+    color: #555753;
+	}
+	
+	#footer a
+	{
+    color: inherit;
+	}
+	
+	#footer-grass
+	{
+    background: url("http://planet.gnome.org/img/30/grass.png") repeat-x scroll center top transparent;
+    height: 39px;
+    margin-top: -33px;
+	}
+	
+	#footer-art
+	{
+		margin-left: auto;
+		margin-right: auto;
+		clear: left;
+		height: 180px;
+		margin-top: 0;
+		width: 940px;
+		background-image: url("http://planet.gnome.org/img/30/default.png");
+	}
+	
+	#planet-banner
+	{
+    margin-left: auto;
+    margin-right: auto;
+    clear: left;
+    margin-top: 0;
+    width: 65em;
+    padding: 0 1em;
+	}
+	
+	
+	#planet-subtitle
+	{
+		color: #555753;
+		font-size: 100%;
+		font-weight: bold;
+		margin: 0;
+		padding 0;
+		padding-top: 14px;
+	}
+	
+	#planet-logo
+	{
+		vertical-align: middle;
+		padding-bottom: 25px;
+		margin-left:    26px;
+		padding-right:  50px;
+	}
+	
+	.post
+	{
+		color: #555753;
+		line-height: 1.6;
+	}
+	</style>
+
+
+
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>
 	<script type="text/javascript" src="http://planet.gnome.org/jquery.cookie.min.js"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>
+	<script type="text/javascript" src="http://planet.gnome.org/jquery.lazyload.min.js"></script>
+	<script type="text/javascript"><!-- $(function(){ $('.post img').lazyload(); }); --></script>
 	<script type="text/javascript">
 	function toggleFeeds() {
 		$("#feedlist").slideToggle(function() {
@@ -63,41 +192,21 @@
 </head>
 
 <body>
-
-
-<div id="gnome-sites">
-<ul><li class="home"><a href="http://www.gnome.org/" title="Home">Home</a></li><li><a href="http://news.gnome.org" title="News">News</a></li><li><a href="http://www.gnome.org/projects/" title="Projects">Projects</a></li><li><a href="http://art.gnome.org" title="Art">Art</a></li><li><a href="http://www.gnome.org/support/" title="Support">Support</a></li><li><a href="http://developer.gnome.org" title="Development">Development</a></li><li><a href="http://www.gnome.org/community/" title="Community">Community</a></li></ul>
-</div> <!-- /gnome-sites -->
-
-
 <div id="page">
 
 
-<div id="header">
+	<div id="global_domain_bar">
+		<div>
+			<a href="http://www.gnome.org"><strong>GNOME</strong>.ORG</a>
+		</div>
+  </div>
 
-<!-- Google CSE Search Box Begins -->
-<div id="search">
-<form id="searchbox_007525575524326405779:c0gv0y410u0" action="http://www.google.com/cse">
-<input type="hidden" name="cx" value="007525575524326405779:c0gv0y410u0">
-<input name="q" type="text" size="15">
-<!--<input type="submit" name="sa" value="Search">-->
-<input type="hidden" name="cof" value="FORID:0">
-</form>
-<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=searchbox_007525575524326405779%3Ac0gv0y410u0"></script>
-</div> <!-- /search -->
-<!-- Google CSE Search Box Ends -->
-
-<div id="masthead">
-<a href="/" title="Home" rel="home"><img src="http://planet.gnome.org/img/logo.png" alt="Home" id="site-logo" width="64" height="64"></a>
-<div id="site-title">
-<p id="site-name"><a href="/" title="Home" rel="home">Planeta GNOME Chile</a></p>
-<p id="site-slogan">24 horas al día, 7 días a la semana, 365 días al año<span title="Yeah, yeah... 366 days per leap year :-)" style="cursor: pointer;">*</span>, esto es Planeta GNOME Chile</p>
-</div> <!-- /site-title -->
-<a id="footer-link" href="#footer">Acerca de Planeta GNOME Chile</a>
-</div> <!-- /masthead -->
-
-</div> <!-- /header -->
-
+	<div id="planet-banner">
+		<p id="planet-subtitle">
+			<img id="planet-logo" src="http://planet.gnome.org/img/30/planet-logo.png"  alt="Planeta GNOME Chile" title="Planeta GNOME Chile"/>
+			24 horas al día, 7 días a la semana, 365 días al año<span title="Yeah, yeah... 366 days per leap year :-)" style="cursor: pointer;">*</span>, esto es Planeta GNOME Chile
+		</p>
+	</div>
 
 <div id="content">
 
@@ -143,6 +252,8 @@
 
 </div> <!-- /content -->
 
+<div id="footer-art"> &nbsp; </div>
+<div id="footer-grass"> &nbsp; </div>
 
 <div id="feeds">
 	<h3><a href="feeds.html">Feeds</a></h3>
@@ -156,9 +267,9 @@
 <h3>Planeta GNOME Chile</h3>
 <p><b>Planeta GNOME Chile es una ventana al mundo, trabajo y vidas de la <a href="http://www.gnome.cl">Comunidad GNOME en Chile</a>.</b></p>
 
-<p>Brought to you by the <a href="http://www.planetplanet.org/">Planet</a> aggregator, cron, <a href="http://www.python.org/">Python</a>, <a href="http://www.redhat.com/">Red Hat</a> (who kindly host the GNOME servers). Design by <a href="http://bethesignal.org/">Jeff Waugh</a>, inspired by earlier work from <a href="http://www.actsofvolition.com/">Steven Garrity</a>, <a href="http://www.gnome.org/~seth/">Seth Nickell</a> and <a href="http://www.isity.net/">Diana Fong</a>.</p>
+<p>Brought to you by the <a href="http://www.planetplanet.org/">Planet</a> aggregator, cron, <a href="http://www.python.org/">Python</a>, <a href="http://www.redhat.com/">Red Hat</a> (who kindly host the GNOME servers). Design by <a href="http://vinicius.depizzol.com.br/blog/">Vinicius Depizzol</a> and <a href="http://aruiz.typepad.com">Alberto Ruiz</a>, inspired by earlier work from <a href="http://bethesignal.org/">Jeff Waugh</a>, <a href="http://www.actsofvolition.com/">Steven Garrity</a>, <a href="http://www.gnome.org/~seth/">Seth Nickell</a> and <a href="http://www.isity.net/">Diana Fong</a>.</p>
 
-<p>Planeta GNOME Chile es mantenido por <a href="mailto:pvillavi@gnome.org?Subject=planet.gnome.org">Pedro Villavicencio</a>, Envía un correo electrónico si tienes alguna duda o deseas que tu sitio sea agregado.</p>
+<p>Planeta GNOME Chile es mantenido por <a href="mailto:pvillavi at gnome dot org?Subject=planeta.gnome.cl">Pedro Villavicencio</a>, Envía un correo electrónico si tienes alguna duda o deseas que tu sitio sea agregado.</p>
 
 <p>Actualizado el <TMPL_VAR date> UTC. Las entradas est&aacute;n normalizadas a tiempo UTC.</p>
 </div>
@@ -188,8 +299,8 @@
 </div>
 
 <div id="fineprint" class="section">
-<h3><img src="img/footer-logo.png" alt="GNOME" title="GNOME"></h3>
-<p>Copyright © 2003-2009, <a href="http://www.gnome.org/">The GNOME Project</a>.<br>
+<h3><img src="http://planet.gnome.org/img/30/gnome-logo.png" alt="GNOME" title="GNOME"></h3>
+<p>Copyright © 2003-2011, <a href="http://www.gnome.org/">The GNOME Project</a>.<br>
 <a href="http://validator.w3.org/check/referer">Optimised</a> for <a href="http://www.w3.org/">standards</a>.<br>
 Hosted by <a href="http://www.redhat.com/">Red Hat</a>.</p>
 <p id="ownership">Las entradas reunidas en esta p&aacute;gina pertenecen y representan la opini&oacute;n de
