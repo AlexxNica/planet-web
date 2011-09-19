@@ -13,16 +13,16 @@
 
   <maintainer>
     <foaf:Person>
-      <foaf:name>Alberto Ruiz</foaf:name>
-      <foaf:mbox rdf:resource="mailto:aruiz@gnome.org" />
-      <gnome:userid>aruiz</gnome:userid>
+      <foaf:name>Juanje Ojeda</foaf:name>
+      <foaf:mbox rdf:resource="mailto:jojeda@gnome.org" />
+      <gnome:userid>jojeda</gnome:userid>
     </foaf:Person>
   </maintainer>
   <maintainer>
     <foaf:Person>
-      <foaf:name>Vincent Untz</foaf:name>
-      <foaf:mbox rdf:resource="mailto:vuntz@gnome.org" />
-      <gnome:userid>vuntz</gnome:userid>
+      <foaf:name>Alberto Ruiz</foaf:name>
+      <foaf:mbox rdf:resource="mailto:aruiz@gnome.org" />
+      <gnome:userid>aruiz</gnome:userid>
     </foaf:Person>
   </maintainer>
   <maintainer>
