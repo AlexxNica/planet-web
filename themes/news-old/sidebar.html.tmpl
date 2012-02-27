@@ -1,0 +1,17 @@
+<ul>
+<TMPL_LOOP Items>
+### we can only show items that have titles in this feed
+<TMPL_IF title>
+<li>
+<a href="<TMPL_VAR link ESCAPE="HTML">">
+<TMPL_IF channel_face>
+<img src="<TMPL_VAR channel_face ESCAPE="HTML">" height="24" alt="">
+<TMPL_ELSE>
+<img src="http://planet.gnome.org/heads/nobody.png" height="24" alt="">
+</TMPL_IF>
+<TMPL_VAR title></a>
+</li>
+</TMPL_IF>
+
+</TMPL_LOOP>
+</ul>
