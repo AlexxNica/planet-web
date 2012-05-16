@@ -1,3 +1,6 @@
+Updating the set of feeds
+=========================
+
 Please don't commit to this module without permission from the Planet GNOME
 editors (currently Juanje Ojeda, Alberto Ruiz, Jeff Waugh). Strong editorial
 policies have kept Planet GNOME relevant and readable, so even though it seems
@@ -9,3 +12,34 @@ Please don't run update-* manually, they are executed by the update script
 and cron, to automagically do the right thing.
 
 Thanks!
+
+
+Updating the planet software
+============================
+
+The planet software we use is logically taken from upstream, which can
+be found here:
+
+  https://github.com/rubys/venus
+
+We maintain a mirror of that branch in our "upstream" branch:
+
+  http://git.gnome.org/browse/planet-web/log/?h=upstream
+
+Then we merge any patches that we might have onto our "venus" branch:
+
+  http://git.gnome.org/browse/planet-web/log/?h=venus
+
+Any patch we have there should be submitted upstream as well.
+
+Then we merge venus into master:
+
+  http://git.gnome.org/browse/planet-web/log/?h=master
+
+And that results in a planet-web with our configuration, but upstream
+code.
+
+So to update the version of planet, check out the upstream branch and
+merge in rubys/venus changes.  Then check out venus and merge upstream,
+pinging any patches that are not in rubys.  Then merge to master.
+Voilà!
